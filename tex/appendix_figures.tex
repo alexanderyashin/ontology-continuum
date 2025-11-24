@@ -1,10 +1,12 @@
 % appendix_figures.tex
 % Core v2.5 — Appendix G: ASCII Figures
 
-\section*{Appendix G: Figures}
-\addcontentsline{toc}{section}{Appendix G: Figures}
+\section*{Appendix G: ASCII Figures}
+\addcontentsline{toc}{section}{Appendix G: ASCII Figures}
 
-This appendix contains schematic ASCII diagrams illustrating the structure of the Ontology of Continuum (Core v2.5). All figures are text–only and require no external packages.
+This appendix contains schematic ASCII diagrams illustrating the structure
+of the Continuum Framework (Core v2.5). All figures are text only and
+require no additional graphics packages.
 
 % -------------------------------------------------------------
 \subsection*{G.1 Universal Architecture of a Continuum}
@@ -27,85 +29,89 @@ This appendix contains schematic ASCII diagrams illustrating the structure of th
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.2 Transition Operator Psi (K_x → K_{x+1})}
+\subsection*{G.2 Transition Operator Psi (Kx to Kx+1)}
 \label{fig:transition_operator}
 
 \begin{verbatim}
-     +--------------+     Psi_{x→x+1}     +---------------------+
-     |   K_x        |  ----------------->  |     K_{x+1}         |
-     +--------------+                      +---------------------+
-       Omega_x                                   Omega_{x+1}
-       A_x                                       A_{x+1}
-       P_x            Birth of new axis          P_{x+1}
-       Theta_x  ----------------------------->   Theta_{x+1}
-       C_x                                       C_{x+1}
-       k_x(t)                                    k_{x+1}(t)
+     +--------------+     Psi (Kx to Kx+1)   +---------------------+
+     |   Kx         |  ------------------->  |   Kx_plus_1          |
+     +--------------+                        +---------------------+
+       Omega_x                                   Omega_x_plus_1
+       A_x                                       A_x_plus_1
+       P_x            Birth of new axis          P_x_plus_1
+       Theta_x  ----------------------------->   Theta_x_plus_1
+       C_x                                       C_x_plus_1
+       k_x(t)                                    k_x_plus_1(t)
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.3 K0–K12 Ladder}
+\subsection*{G.3 K0 to K12 Ladder}
 \label{fig:k_ladder}
 
 \begin{verbatim}
- K12  Artificial Meta-Systems
- K11  Multi-Agent Systems
- K10  Meta-Models
- K9   Meta-Theories
- K8   Civilizational Systems
- K7   Social Systems
- K6   Cognitive Systems
- K5   Neural Systems
- K4   Cellular Systems
- K3   Chemical Reaction Networks
- K2   Percolation / Phase Continuity
- K1   One-Dimensional Continuum
- K0   Meta-Logical Substrate
+ K12  Artificial meta-systems
+ K11  Language and semantic systems
+ K10  Meta-models and categories
+ K9   Meta-theories and paradigms
+ K8   Civilisational systems
+ K7   Social systems and institutions
+ K6   Cognitive systems
+ K5   Neural systems
+ K4   Cellular and protocellular systems
+ K3   Autocatalytic chemistry
+ K2   Percolation and critical fields
+ K1   One-dimensional continuum
+ K0   Meta-logical substrate
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.4 Boundary and Omega / Partial-Omega Structure}
+\subsection*{G.4 Admissible Region Omega(K) and Boundary}
 \label{fig:omega_boundary}
 
 \begin{verbatim}
               +-------------------------------------+
-              |            Omega(K)                  |
-              |  (all admissible states)            |
+              |            Omega(K)                 |
+              |       (admissible states)           |
               |                                     |
               |   +-----------------------------+   |
-              |   |     interior(Omega)         |   |
-              |   | cycles C ≠ ∅                |   |
+              |   |     interior of Omega       |   |
+              |   |   cycles C not empty        |   |
               |   +-----------------------------+   |
               |                                     |
               +-------------------------------------+
-                       ^ boundary: ∂Omega(K)
+                       ^ boundary: dOmega(K)
+
+Outside Omega(K): forbidden states (thresholds exceeded or
+axes / potentials outside their allowed domains).
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.5 Phase Transition / Threshold Crossing}
+\subsection*{G.5 Generic Phase Transition of Continuity k(t)}
 \label{fig:phase_transition}
 
 \begin{verbatim}
-                   T(t) < Theta    → stable
-                   T(t) = Theta    → critical
-                   T(t) > Theta    → breakdown
+                   T(t) < Theta    -> stable
+                   T(t) = Theta    -> critical
+                   T(t) > Theta    -> breakdown
 
       k(t)
-       |
+       ^
      1 |---------\____
        |          \   \__ collapse
-       +---------------------------→  t
+       +--------------------------->
+                     control parameter or time
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.6 Spike Cycle (K4 → K5 Transition)}
+\subsection*{G.6 Spike Cycle in Neural Continuum K5}
 \label{fig:spike_cycle}
 
 \begin{verbatim}
@@ -113,16 +119,24 @@ This appendix contains schematic ASCII diagrams illustrating the structure of th
 
       +------------------ spike ------------------+
       |                                           |
- -70mV|___ depol ____/ \____ repol ____ undershoot |
-      |                                           |
+ -70mV|___ depolarisation _/ \_ repolarisation ___|
+      |                    \_/                    |
       +-------------------------------------------+
-             threshold Theta_exc crossed
+             threshold Theta_spike crossed
+
+Phases:
+- rest: stable membrane potential
+- depolarisation: V(t) crosses Theta_spike
+- spike peak and repolarisation
+- undershoot and return to rest
+
+One full loop is the spike cycle with period tau_spike.
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.7 Institutional Cycle (K7)}
+\subsection*{G.7 Institutional Cycle in Social Continuum K7}
 \label{fig:institution_cycle}
 
 \begin{verbatim}
@@ -141,38 +155,49 @@ This appendix contains schematic ASCII diagrams illustrating the structure of th
      +------v------+
      | Sanctions   |
      +-------------+
+
+If any arrow is broken, the institutional cycle fails and the
+corresponding part of the social continuum leaves its admissible set.
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.8 Civilizational Tension Landscape (K8)}
+\subsection*{G.8 Civilisational Tension Landscape in K8}
 \label{fig:civ_tension}
 
 \begin{verbatim}
     Tension T8
        ^
-       |             /\   unstable
+       |             /\   unstable region
        |            /  \
        |   stable  /    \   stable
        |__________/      \__________
-               infrastructure magnitude →
+               infrastructure scale or load ->
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.9 K3–K4 Closure Diagram (Birth of Membrane)}
+\subsection*{G.9 K3 to K4 Closure (Birth of Membrane)}
 \label{fig:k3k4_closure}
 
 \begin{verbatim}
    +------------------------+      +----------------------------+
-   |   RAF Network (K3)     | ---> |  Bounded Compartment (K4)  |
+   |   RAF network (K3)     | ---> |  Bounded compartment (K4)  |
    +------------------------+      +----------------------------+
           reactions                      membrane
           autocatalysis                  transport rules
-          cycles                         gradients
-                                          thresholds
+          simple cycles                  stable gradients
+                                         membrane thresholds
 \end{verbatim}
 
 \bigskip
+
+\section*{Summary of Appendix G}
+The ASCII diagrams above provide visual intuition for the main
+constructions of the Continuum Framework: the universal architecture
+of a continuum, dimensional transitions, the K0 to K12 hierarchy,
+admissible regions and boundaries, generic phase transitions,
+neural and institutional cycles, civilisational tension, and the
+closure step from K3 to K4.
