@@ -1,178 +1,279 @@
 % disciplines.tex
-% Core v2.5 — Disciplinary Instantiations of the Continuum Framework
+% Core v2.5 — Disciplines and Domains of Application
 
-\section{Disciplinary Instantiations}
+\section{Disciplines and Domains of Application}
 \label{sec:disciplines}
 
-This section outlines how the Continuum Core applies to major scientific
-disciplines.  
-Each field corresponds to a specific level \(K_x\) and inherits the universal
-template
+The Continuum Framework is not a theory of a single field, but a
+cross-level architecture intended to connect physics, chemistry,
+biology, cognition, social systems, civilisations, and metatheory
+under one structural template.  
+In this section we map the levels
 \[
-  K = (\Omega, A, P, \Theta, J, C, k)
+  K_0,\dots,K_{12}
 \]
-with domain-appropriate instantiations of state space, axes, potentials,
-thresholds, flows, cycles, and continuity.
+to concrete scientific and philosophical disciplines and explain how
+existing theories can be embedded into the continuum language.
 
-\subsection{Physics: Levels \texorpdfstring{$K_0$}{K0}–\texorpdfstring{$K_2$}{K2}}
+The goal is not to replace established models, but to provide a
+meta-structure in which they become comparable, composable, and
+explicitly connected through the notions of:
+\begin{itemize}
+  \item admissible states \(\Omega(K_x)\),
+  \item axes of difference \(A(K_x)\),
+  \item potentials \(P(K_x)\),
+  \item thresholds \(\Theta(K_x)\),
+  \item flows \(J(K_x)\),
+  \item cycles \(C(K_x)\),
+  \item and continuumness \(k_x(t)\).
+\end{itemize}
+
+\subsection{Physics: Lattices, Fields and Percolation (\texorpdfstring{$K_0$--$K_2$}{K0--K2})}
 \label{subsec:disciplines-physics}
 
-Physics corresponds to the foundational levels of the hierarchy.
+The base levels of the Framework correspond to the traditional domain
+of theoretical physics and mathematical foundations.
 
-\paragraph{K0 (Metalogical Foundations).}
-Sets logical constraints for physical possibility.
+\paragraph{Foundations and mathematical physics (\(K_0\)).}
+The metalogical layer \(K_0\) is not a physical system itself, but the
+formal arena in which the conditions of possibility for physical
+theories are formulated: logic, set theory, topology, measure theory
+and the definition of state spaces and observables.  
+This is the natural home of:
+\begin{itemize}
+  \item axiomatic formulations of probability and measure,
+  \item the construction of configuration spaces and phase spaces,
+  \item functional analytic foundations of quantum and classical fields.
+\end{itemize}
+In the continuum language, these structures define the ambient
+spaces \(S(K_x)\) and the admissible domains for potentials and axes.
 
-\paragraph{K1 (Lattice Physics).}
-Discrete state spaces, energy functionals, minimal cycles.
-Continuumness:
-\[
-  k_1 = \frac{|C_{\max}|}{|X|}.
-\]
+\paragraph{Lattice systems and local interactions (\(K_1\)).}
+The level \(K_1\) captures finite systems with local interactions on a
+discrete support, such as:
+\begin{itemize}
+  \item Ising and Potts models on finite lattices,
+  \item cellular automata with local update rules,
+  \item finite-network models in statistical mechanics.
+\end{itemize}
+Here, disciplines such as statistical mechanics and computational
+physics appear in their most concrete form: the dynamics of
+occupation variables, spins, or local fields on finite graphs.
 
-\paragraph{K2 (Percolation / Early Statistical Mechanics).}
-Emergent clusters, correlation lengths, minimal percolation cycle.
-Continuumness:
-\[
-  k_2 = P_\infty.
-\]
+\paragraph{Percolation and critical phenomena (\(K_2\)).}
+The level \(K_2\) corresponds to the thermodynamic limit and to
+continuum descriptions of critical behaviour, including:
+\begin{itemize}
+  \item percolation theory on infinite lattices,
+  \item renormalisation-group descriptions near critical points,
+  \item field-theoretic descriptions of topological phase transitions.
+\end{itemize}
+The function \(k_2(p)\), the probability that a site belongs to the
+infinite cluster, becomes a prototype of an order parameter.  
+The general principle is that many physical theories can be rewritten
+as statements about how \(k_2\) changes when potentials and control
+parameters cross critical thresholds.
 
-These levels capture the minimal structural conditions for physical
-connectivity, correlation, and time.
-
-\subsection{Chemistry: Levels \texorpdfstring{$K_2$}{K2}–\texorpdfstring{$K_4$}{K4}}
+\subsection{Chemistry and the Origin of Life (\texorpdfstring{$K_3$--$K_4$}{K3--K4})}
 \label{subsec:disciplines-chemistry}
 
-Chemistry emerges when connectivity yields stable reaction networks.
+Levels \(K_3\) and \(K_4\) are associated with physical chemistry,
+systems chemistry, and origin-of-life research.
 
-\paragraph{K2.}
-Statistical mechanics and local fluctuations set the background.
+\paragraph{Autocatalytic networks and systems chemistry (\(K_3\)).}
+In \(K_3\) the central objects are reaction graphs and concentration
+vectors. This is the domain of:
+\begin{itemize}
+  \item chemical reaction network theory,
+  \item autocatalytic set theory and RAF networks,
+  \item non-equilibrium thermodynamics in open reactors.
+\end{itemize}
+The continuum structure provides a systematic way to distinguish
+between:
+\begin{itemize}
+  \item transient collections of reactions that die out, and
+  \item self-sustaining, strongly connected autocatalytic networks
+        that define a non-zero \(k_3\).
+\end{itemize}
+The notion of cycles \(C_3\) captures metabolic and catalytic loops
+that remain active in admissible states.
 
-\paragraph{K3 (Autocatalytic Sets).}
-Reaction axes \(A_{\mathrm{react}}\), chemical potentials,
-feasibility thresholds \(\Theta_{\mathrm{react}}\),
-reaction flows \(J_{\mathrm{chem}}\),
-RAF cycles.
+\paragraph{Protocells and membrane-bound systems (\(K_4\)).}
+Level \(K_4\) corresponds to protocells, vesicles and early cellular
+systems, combining:
+\begin{itemize}
+  \item membrane biophysics,
+  \item osmotic and mechanical stability,
+  \item compartmentalised metabolism.
+\end{itemize}
+Disciplines here include soft-matter physics, biophysics of membranes,
+and systems biology of minimal cells.  
+From the continuum perspective, the appearance of a semi-permeable
+boundary and stable gradients is a dimensional transition: a new axis
+(inside/outside) turns previously unbounded chemistry into a
+protocellular continuum with its own admissible region \(\Omega(K_4)\)
+and non-zero \(k_4(t)\).
 
-\paragraph{K4 (Protocells).}
-Membrane axes (inside/outside, permeability),
-osmotic and electrochemical potentials,
-membrane thresholds \(\Theta_{\mathrm{mem}}\),
-transport flows, metabolic cycles.
+\subsection{Neuroscience and Cognition (\texorpdfstring{$K_5$--$K_6$}{K5--K6})}
+\label{subsec:disciplines-neuro-cog}
 
-Chemistry is the interplay of fluxes, thresholds, and cycles that stabilise
-compartmentalised reaction systems.
+Levels \(K_5\) and \(K_6\) are the domain of neuroscience,
+computational neuroscience and cognitive science.
 
-\subsection{Biology: Levels \texorpdfstring{$K_4$}{K4}–\texorpdfstring{$K_6$}{K6}}
-\label{subsec:disciplines-biology}
+\paragraph{Neuronal dynamics (\(K_5\)).}
+In \(K_5\) the elementary objects are neurons, ion channels and
+synapses. Disciplines include:
+\begin{itemize}
+  \item electrophysiology (spike generation and propagation),
+  \item network neuroscience,
+  \item models of rhythmic activity and oscillations.
+\end{itemize}
+The continuum perspective emphasises spike cycles
+\(C_{\mathrm{spike}}\), phase transitions at excitation thresholds,
+and the emergence of network-level cycles that stabilise patterns of
+activity. The degree of continuumness \(k_5\) reflects how much of the
+network participates in coherent, sustainable dynamics.
 
-Biology emerges when protocellular systems develop excitation,
-information flow, and stable cognitive models.
+\paragraph{Cognitive models and predictive processing (\(K_6\)).}
+At level \(K_6\) the basic objects are internal models, beliefs and
+prediction-error dynamics. This is the home of:
+\begin{itemize}
+  \item predictive processing and active inference,
+  \item attractor network models of memory and decision-making,
+  \item formal theories of representation and belief revision.
+\end{itemize}
+The axes \(A^{(6)}\) encode distinctions between models; the potentials
+\(P^{(6)}\) quantify prediction error, value and salience; thresholds
+\(\Theta_{\mathrm{cog}}\) determine when models must update or be
+replaced.  
+The Framework allows disparate cognitive models to be compared by
+asking how they implement flows \(J_6\), cycles \(C_6\) and the
+evolution of \(k_6(t)\) under perturbations.
 
-\paragraph{K4.}
-Compartmentalisation, gradients, metabolism.
+\subsection{Social Systems and Institutions (\texorpdfstring{$K_7$}{K7})}
+\label{subsec:disciplines-social}
 
-\paragraph{K5 (Neuronal Systems).}
-Excitable membranes with thresholds \(\Theta_{\mathrm{spike}}\),
-ion flows,
-spike cycles,
-neuronal connectivity.
+Level \(K_7\) corresponds to sociology, political science, economics in
+its institutional and organisational aspects, and parts of anthropology.
 
-\paragraph{K6 (Cognitive Systems).}
-Model axes \(A^{(6)}\),
-prediction-error potentials,
-cognitive thresholds \(\Theta_{\mathrm{cog}}\),
-information flows,
-cognitive cycles and attractors.
+\paragraph{Communication, norms and roles.}
+The state space of \(K_7\) includes agents, roles and communication
+structures. This provides a unifying language for:
+\begin{itemize}
+  \item theories of social systems and communication,
+  \item models of cooperation, norm formation and conflict,
+  \item institutional analysis (law, organisations, governance).
+\end{itemize}
+The Framework treats social order not as a static structure but as a
+network of cycles \(C_{\mathrm{inst}}\) in which norms are created,
+codified, enforced, internalised and revised.  
+Breakdown of an institution corresponds to leaving \(\Omega(K_7)\)
+when thresholds for cooperation, legitimacy or enforcement are
+violated. The function \(k_7\) summarises the effective connectedness
+and stability of the social continuum.
 
-Biology is the domain where structural tension, cycles, and flows produce
-adaptation, agency, and model-based behaviour.
+\subsection{Civilisations and Technological Systems (\texorpdfstring{$K_8$}{K8})}
+\label{subsec:disciplines-civilisation}
 
-\subsection{Sociology: Level \texorpdfstring{$K_7$}{K7}}
-\label{subsec:disciplines-sociology}
+Level \(K_8\) belongs to macro-sociology, economic history, world
+systems theory, technology studies and infrastructure research.
 
-Social systems arise when cognitive agents produce stable interaction
-patterns constrained by norms and roles.
+\paragraph{Technosphere and long-term dynamics.}
+Here the state space includes technologies, infrastructures, economic
+and legal systems, and symbolic structures such as writing and money.
+Disciplines and topics include:
+\begin{itemize}
+  \item theories of civilisational rise and collapse,
+  \item technology and innovation studies,
+  \item large-scale infrastructure and network resilience,
+  \item long-wave economic and political cycles.
+\end{itemize}
+The continuum lens emphasises how civilisations maintain a non-zero
+\(k_8\) by stabilising crucial cycles \(C_8\) (for example food
+production, energy supply, institutional reproduction).  
+Thresholds \(\Theta_{\mathrm{stab}}\) mark the limits of load and
+stress that these structures can absorb before systemic reorganisation
+or collapse becomes unavoidable.
 
-\paragraph{State Space.}
-Agents, roles, communications.
+\subsection{Metatheory, Semantics and Artificial Systems (\texorpdfstring{$K_9$--$K_{12}$}{K9--K12})}
+\label{subsec:disciplines-meta-ai}
 
-\paragraph{Axes.}
-Social-difference axes, role axes, normative axes.
+The upper levels of the Framework connect to philosophy of science,
+logic, linguistics and artificial intelligence.
 
-\paragraph{Potentials.}
-Cooperation, trust, conflict potentials.
+\paragraph{Metatheoretical structures (\(K_9\)).}
+Level \(K_9\) hosts:
+\begin{itemize}
+  \item philosophy of science,
+  \item formal metatheory and model theory,
+  \item studies of scientific paradigms and research programmes.
+\end{itemize}
+Theories, logics and models become elements of \(\Omega(K_9)\), and
+their compatibility is analysed using axes of abstraction and
+interpretation.  
+Continuumness \(k_9\) reflects the coherence, explanatory power and
+empirical support of a theoretical landscape.
 
-\paragraph{Thresholds.}
-Cooperation threshold \(\Theta_{\mathrm{coop}}\).
+\paragraph{Metamodels and categorical structure (\(K_{10}\)).}
+Level \(K_{10}\) corresponds to category-theoretic approaches to
+physics, computation and systems, as well as to general frameworks for
+comparing models across disciplines.  
+Objects are model categories; morphisms are functors that translate
+between them.  
+This is where work in category theory, universal algebra and abstract
+semantics finds a natural representation.
 
-\paragraph{Flows.}
-Communication flows \(J_{\mathrm{comm}}\).
+\paragraph{Semantics and language (\(K_{11}\)).}
+In \(K_{11}\) the central objects are meaning assignments, semantic
+spaces and interpretative schemes. Disciplines include:
+\begin{itemize}
+  \item formal semantics and pragmatics,
+  \item computational linguistics,
+  \item distributional and geometric models of meaning.
+\end{itemize}
+The Framework describes semantic stability and drift in terms of
+thresholds \(\Theta_{\mathrm{sem}}\), flows of interpretation \(J_{11}\)
+and cycles of usage and re-interpretation \(C_{11}\).
 
-\paragraph{Cycles.}
-Institutional cycles \(C_{\mathrm{inst}}\).
+\paragraph{Artificial systems and global integration (\(K_{12}\)).}
+Level \(K_{12}\) links:
+\begin{itemize}
+  \item artificial intelligence and machine learning,
+  \item multi-agent systems,
+  \item information theory and algorithmic complexity.
+\end{itemize}
+Artificial systems can be treated as continua in their own right or as
+components of larger human–machine continua.  
+The meta-integrative role of \(K_{12}\) is to describe how natural and
+artificial systems can be embedded into one global integrative space
+with its own coherence measure \(k_{12}\).
 
-\paragraph{Continuumness.}
-\[
-  k_7 = f(\text{communication coherence},\ \text{institutional persistence}).
-\]
+\subsection{Cross-Disciplinary Patterns}
+\label{subsec:disciplines-patterns}
 
-\subsection{Civilizational Theory: Level \texorpdfstring{$K_8$}{K8}}
-\label{subsec:disciplines-civilization}
+Although the underlying phenomena differ dramatically between levels,
+the Continuum Framework identifies a small set of structural motifs
+that recur across disciplines:
+\begin{itemize}
+  \item \textbf{Thresholds and phase transitions:}
+        critical values at which new axes appear or continua collapse
+        (percolation thresholds, membrane-rupture limits, spike
+        thresholds, cooperation thresholds, civilisational stress
+        thresholds).
+  \item \textbf{Cycles as carriers of time and stability:}
+        from percolation correlation cycles through metabolic cycles,
+        spike trains and institutional cycles to long civilisational
+        waves.
+  \item \textbf{Continuumness \(k(t)\) as a unifying order parameter:}
+        measuring how much of the system participates in coherent,
+        admissible dynamics at each level.
+\end{itemize}
 
-Civilizational systems involve long-range structures such as legal codes,
-technologies, infrastructures, and symbolic systems.
-
-\paragraph{State Space.}
-Technologies, institutions, infrastructures, symbols.
-
-\paragraph{Axes.}
-Technological, legal, economic, symbolic.
-
-\paragraph{Potentials.}
-Stability, entropy, innovation potentials.
-
-\paragraph{Thresholds.}
-Civilizational stability \(\Theta_{\mathrm{stab}}\).
-
-\paragraph{Flows.}
-Resource, information, and institutional flows.
-
-\paragraph{Cycles.}
-Civilizational stability cycles \(C_{\mathrm{stab}}\).
-
-\paragraph{Continuumness.}
-\[
-  k_8 = f(\text{infrastructure stability},\ \text{cycle stability}).
-\]
-
-\subsection{Knowledge Theory and Metatheory: Levels \texorpdfstring{$K_9$}{K9}–\texorpdfstring{$K_{12}$}{K12}}
-\label{subsec:disciplines-metatheory}
-
-The final levels correspond to theories about theories, models about models,
-and integration of semantic structures.
-
-\paragraph{K9 (Metatheoretical Systems).}
-Theories, paradigms, and scientific cycles.
-
-\paragraph{K10 (Metamodels).}
-Categories of models and functorial relations.
-
-\paragraph{K11 (Meta-Semantics).}
-Semantic spaces and interpretational consistency.
-
-\paragraph{K12 (Meta-Integration).}
-Integration of semantic and metamodel levels.
-
-These levels handle coherence conditions at the boundary of expressibility
-and global structural integration.
-
-\subsection{Compact Overview}
-\label{subsec:disciplines-summary}
-
-The Continuum Framework unifies the disciplines through a single structure:
-\[
-  (\Omega, A, P, \Theta, J, C, k),
-\]
-with each field arising from a different instantiation of these components.
-All disciplines inherit the same dynamics, thresholds, and criteria for
-emergence, growth, and collapse, ensuring cross-domain consistency.
+In this sense, the Framework provides a disciplined way of importing
+and exporting ideas between fields: a result about the behaviour of
+\(k_2\) near a critical threshold can have analogues in the behaviour
+of \(k_4\) for protocells under osmotic stress, \(k_6\) for cognitive
+systems under overload, or \(k_8\) for civilisations under structural
+pressure.  
+The rest of the paper and the appendices detail these analogies and
+show how they can be turned into concrete predictions.
