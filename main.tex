@@ -1,11 +1,8 @@
 \documentclass[11pt,a4paper]{article}
 
 % -------------------------------------------------
-% Packages
+% Packages (LuaLaTeX-compatible)
 % -------------------------------------------------
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
 \usepackage[a4paper,margin=2.5cm]{geometry}
 
 \usepackage{amsmath, amssymb, amsthm}
@@ -29,7 +26,7 @@
 \usepackage{microtype}
 
 % -------------------------------------------------
-% Theorem environments
+% Theorem Environments
 % -------------------------------------------------
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -66,14 +63,14 @@
 \newpage
 
 % -------------------------------------------------
-% Core Sections (in correct logical order)
+% Core Sections (correct and updated)
 % -------------------------------------------------
 
 \input{tex/abstract}
 \input{tex/introduction}
 \input{tex/foundations}
+\input{tex/core_compact}
 \input{tex/continuity}
-\input{tex/dynamics}
 \input{tex/hierarchy}
 \input{tex/falsifiability}
 \input{tex/applications}
