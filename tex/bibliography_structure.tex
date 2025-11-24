@@ -1,96 +1,108 @@
 % bibliography_structure.tex
-% Core v2.5 — Bibliography Structure (placeholder for user-managed BibTeX)
+% Core v2.5 — Bibliography Structure
 
-\section{Bibliography Structure}
-\label{sec:bibliography-structure}
+\section*{Bibliography}
+\addcontentsline{toc}{section}{Bibliography}
 
-This document uses an external BibTeX file to manage all references.
-The purpose of this section is to define the structure and conventions
-of the bibliography used throughout the Continuum Framework.
+% --------------------------------------------------------------------
+% If you use BibTeX (recommended for the Continuum Project):
+% --------------------------------------------------------------------
 
-\subsection{BibTeX File Organisation}
-\label{subsec:bibliography-organisation}
+% Uncomment the following line once references.bib exists
+% \bibliographystyle{plain}
+% \bibliography{references}
 
-All references are stored in a dedicated file, for example:
-\begin{verbatim}
-references.bib
-\end{verbatim}
+% --------------------------------------------------------------------
+% If you prefer manual entries (not recommended for long documents):
+% --------------------------------------------------------------------
 
-Entries are grouped by discipline and by continuum level:
-\begin{itemize}
-  \item physics (K0–K2),
-  \item chemistry (K2–K4),
-  \item biology (K4–K6),
-  \item cognition (K6),
-  \item sociology (K7),
-  \item civilization studies (K8),
-  \item metatheory and metamodels (K9–K12),
-  \item general systems theory, mathematics, logic.
-\end{itemize}
+\begin{thebibliography}{99}
 
-\subsection{Citation Style}
-\label{subsec:bibliography-style}
+% --------------------------------------------------
+% Physics (K0–K2)
+% --------------------------------------------------
+\bibitem{percolation}
+D.~Stauffer and A.~Aharony.
+\newblock {\em Introduction to Percolation Theory}.
+\newblock Taylor and Francis, 1991.
 
-The recommended citation commands are:
-\begin{itemize}
-  \item \verb|\cite{key}| for parenthetical citations,
-  \item \verb|\citep{key}| and \verb|\citet{key}| if using natbib,
-  \item \verb|\textcite{key}| if using biblatex.
-\end{itemize}
+\bibitem{bkt}
+V.~L.~Berezinskii.
+\newblock Destruction of Long-range Order in One-dimensional and
+Two-dimensional Systems.
+\newblock {\em Sov. Phys. JETP}, 32:493--500, 1971.
 
-Entries should follow common BibTeX standards:
-\begin{itemize}
-  \item \verb|@article|,
-  \item \verb|@book|,
-  \item \verb|@inproceedings|,
-  \item \verb|@misc| (for online or preprint materials).
-\end{itemize}
+\bibitem{kosterlitz}
+J.~M.~Kosterlitz and D.~J.~Thouless.
+\newblock Ordering, metastability and phase transitions in two-dimensional
+systems.
+\newblock {\em J. Phys. C}, 6:1181--1203, 1973.
 
-\subsection{Naming Conventions}
-\label{subsec:bibliography-naming}
+% --------------------------------------------------
+% Chemistry (K3–K4)
+% --------------------------------------------------
+\bibitem{raf-eigen}
+S.~A.~Kauffman.
+\newblock Autocatalytic sets of proteins.
+\newblock {\em J. Theor. Biol.}, 119:1--24, 1986.
 
-Keys should follow the form:
-\[
-  \text{AuthorLastNameYearShortTitle}
-\]
-Examples:
-\begin{verbatim}
-Kauffman1993Origins
-Szostak2018Protocells
-Nassehi2005SozialeSysteme
-Ladyman2013Complexity
-Girvan2002Community
-\end{verbatim}
+\bibitem{szostak}
+J.~W.~Szostak.
+\newblock Protocells and the origin of cellular life.
+\newblock {\em Annu. Rev. Biochem.}, 81:335--360, 2012.
 
-\subsection{Cross-Level Referencing}
-\label{subsec:bibliography-cross}
+% --------------------------------------------------
+% Biology (K4–K5)
+% --------------------------------------------------
+\bibitem{hodgkin-huxley}
+A.~L.~Hodgkin and A.~F.~Huxley.
+\newblock A quantitative description of membrane current and its application
+to conduction and excitation in nerve.
+\newblock {\em J. Physiol.}, 117:500--544, 1952.
 
-References may be associated with several levels. For example:
-\begin{itemize}
-  \item theoretical biology texts may be cited in both K4 and K5,
-  \item computational neuroscience may sit between K5 and K6,
-  \item sociocybernetics may link K7 and K8,
-  \item logical or semantic works apply to K9–K12.
-\end{itemize}
+\bibitem{spike-initiation}
+E.~M.~Izhikevich.
+\newblock Simple model of spiking neurons.
+\newblock {\em IEEE Trans. Neural Networks}, 14:1569--1572, 2003.
 
-\subsection{BibTeX Example Entry}
-\label{subsec:bibliography-example}
+% --------------------------------------------------
+% Cognition (K6)
+% --------------------------------------------------
+\bibitem{predictive-processing}
+K.~Friston.
+\newblock The free-energy principle: a unified brain theory?
+\newblock {\em Nat. Rev. Neurosci.}, 11:127--138, 2010.
 
-A typical BibTeX entry:
-\begin{verbatim}
-@article{Kauffman1993Origins,
-  author    = {Stuart A. Kauffman},
-  title     = {Autocatalytic Sets of Proteins},
-  journal   = {Journal of Theoretical Biology},
-  year      = {1993},
-  volume    = {181},
-  pages     = {47--94}
-}
-\end{verbatim}
+% --------------------------------------------------
+% Social Systems (K7)
+% --------------------------------------------------
+\bibitem{luhmann}
+N.~Luhmann.
+\newblock {\em Social Systems}.
+\newblock Stanford University Press, 1995.
 
-\subsection{Summary}
-\label{subsec:bibliography-summary}
+% --------------------------------------------------
+% Civilisation (K8)
+% --------------------------------------------------
+\bibitem{turchin}
+P.~Turchin.
+\newblock {\em Cliodynamics: The Journal of Quantitative History and Cultural
+Evolution}, various articles.
 
-This section defines the structure of the bibliography, expects references
-to be supplied via an external BibTeX file, and outlines conventions for
-consistent citation across all continuum levels in the unified hierarchy.
+% --------------------------------------------------
+% Metatheory (K9–K11)
+% --------------------------------------------------
+\bibitem{kun}
+T.~S.~Kuhn.
+\newblock {\em The Structure of Scientific Revolutions}.
+\newblock University of Chicago Press, 1962.
+
+% --------------------------------------------------
+% Artificial Systems (K12)
+% --------------------------------------------------
+\bibitem{distributed-ai}
+B.~Grosz and S.~Kraus.
+\newblock Collaborative multi-agent planning.
+\newblock {\em AI Magazine}, 20:39--52, 1999.
+
+\end{thebibliography}
