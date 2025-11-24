@@ -4,9 +4,9 @@
 \section*{Appendix G: ASCII Figures}
 \addcontentsline{toc}{section}{Appendix G: ASCII Figures}
 
-This appendix contains schematic ASCII diagrams illustrating the structure
-of the Continuum Framework (Core v2.5). All figures are text only and
-require no additional graphics packages.
+This appendix provides schematic ASCII diagrams illustrating key structural
+concepts of the Continuum Framework (Core v2.5). All figures are purely
+textual and require no graphical packages.
 
 % -------------------------------------------------------------
 \subsection*{G.1 Universal Architecture of a Continuum}
@@ -22,26 +22,26 @@ require no additional graphics packages.
                   |   Theta:  thresholds          |
                   |   J:      flows               |
                   |   C:      cycles              |
-                  |   k(t):   continuity measure  |
+                  |   k(t):   continuumness       |
                   +-------------------------------+
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.2 Transition Operator Psi (Kx to Kx+1)}
+\subsection*{G.2 Transition Operator Psi (Kx → Kx+1)}
 \label{fig:transition_operator}
 
 \begin{verbatim}
-     +--------------+     Psi (Kx to Kx+1)   +---------------------+
-     |   Kx         |  ------------------->  |   Kx_plus_1          |
-     +--------------+                        +---------------------+
-       Omega_x                                   Omega_x_plus_1
-       A_x                                       A_x_plus_1
-       P_x            Birth of new axis          P_x_plus_1
-       Theta_x  ----------------------------->   Theta_x_plus_1
-       C_x                                       C_x_plus_1
-       k_x(t)                                    k_x_plus_1(t)
+     +--------------+     Psi (Kx → Kx+1)     +---------------------+
+     |     Kx       |  ---------------------> |    Kx_plus_1        |
+     +--------------+                         +---------------------+
+       Omega_x                                      Omega_x+1
+       A_x                                          A_x+1
+       P_x             new axis emerges             P_x+1
+       Theta_x   ------------------------------->   Theta_x+1
+       C_x                                          C_x+1
+       k_x(t)                                       k_x+1(t)
 \end{verbatim}
 
 \bigskip
@@ -69,30 +69,30 @@ require no additional graphics packages.
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.4 Admissible Region Omega(K) and Boundary}
+\subsection*{G.4 Admissible Region Ω(K) and Boundary ∂Ω(K)}
 \label{fig:omega_boundary}
 
 \begin{verbatim}
               +-------------------------------------+
               |            Omega(K)                 |
-              |       (admissible states)           |
+              |        (admissible states)          |
               |                                     |
               |   +-----------------------------+   |
-              |   |     interior of Omega       |   |
+              |   |      interior of Omega      |   |
               |   |   cycles C not empty        |   |
               |   +-----------------------------+   |
               |                                     |
               +-------------------------------------+
                        ^ boundary: dOmega(K)
 
-Outside Omega(K): forbidden states (thresholds exceeded or
-axes / potentials outside their allowed domains).
+Outside Omega(K): forbidden states
+(thresholds exceeded or domains violated).
 \end{verbatim}
 
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.5 Generic Phase Transition of Continuity k(t)}
+\subsection*{G.5 Generic Phase Transition of k(t)}
 \label{fig:phase_transition}
 
 \begin{verbatim}
@@ -104,8 +104,7 @@ axes / potentials outside their allowed domains).
        ^
      1 |---------\____
        |          \   \__ collapse
-       +--------------------------->
-                     control parameter or time
+       +---------------------------> time or control parameter
 \end{verbatim}
 
 \bigskip
@@ -122,10 +121,10 @@ axes / potentials outside their allowed domains).
  -70mV|___ depolarisation _/ \_ repolarisation ___|
       |                    \_/                    |
       +-------------------------------------------+
-             threshold Theta_spike crossed
+                threshold Theta_spike crossed
 
 Phases:
-- rest: stable membrane potential
+- rest: stable potential
 - depolarisation: V(t) crosses Theta_spike
 - spike peak and repolarisation
 - undershoot and return to rest
@@ -156,8 +155,8 @@ One full loop is the spike cycle with period tau_spike.
      | Sanctions   |
      +-------------+
 
-If any arrow is broken, the institutional cycle fails and the
-corresponding part of the social continuum leaves its admissible set.
+If any link breaks, the institutional cycle collapses and the
+corresponding subsystem leaves Omega(K7).
 \end{verbatim}
 
 \bigskip
@@ -169,7 +168,7 @@ corresponding part of the social continuum leaves its admissible set.
 \begin{verbatim}
     Tension T8
        ^
-       |             /\   unstable region
+       |             /\    unstable region
        |            /  \
        |   stable  /    \   stable
        |__________/      \__________
@@ -179,25 +178,26 @@ corresponding part of the social continuum leaves its admissible set.
 \bigskip
 
 % -------------------------------------------------------------
-\subsection*{G.9 K3 to K4 Closure (Birth of Membrane)}
+\subsection*{G.9 K3 → K4 Closure (Birth of the Membrane)}
 \label{fig:k3k4_closure}
 
 \begin{verbatim}
    +------------------------+      +----------------------------+
    |   RAF network (K3)     | ---> |  Bounded compartment (K4)  |
    +------------------------+      +----------------------------+
-          reactions                      membrane
-          autocatalysis                  transport rules
-          simple cycles                  stable gradients
+        reactions                        membrane
+        autocatalysis                    transport rules
+        simple cycles                    stable gradients
                                          membrane thresholds
 \end{verbatim}
 
 \bigskip
 
 \section*{Summary of Appendix G}
-The ASCII diagrams above provide visual intuition for the main
-constructions of the Continuum Framework: the universal architecture
-of a continuum, dimensional transitions, the K0 to K12 hierarchy,
-admissible regions and boundaries, generic phase transitions,
-neural and institutional cycles, civilisational tension, and the
-closure step from K3 to K4.
+\addcontentsline{toc}{subsection}{Summary of Appendix G}
+
+The ASCII diagrams above illustrate the central constructions of the Continuum
+Framework: universal continuum architecture, transition operators, the full
+K0–K12 hierarchy, admissibility and boundary geometry, phase transitions of
+continuity, neural and institutional cycles, civilisational tension, and the
+birth of bounded compartments in the K3→K4 transition.
