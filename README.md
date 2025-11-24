@@ -1,10 +1,11 @@
-The Ontology of Continua
-Unified Axiomatic Framework for Emergence, Persistence and Collapse
+# The Ontology of Continua
+### Unified Axiomatic Framework for Emergence, Persistence and Collapse
 
-Author: Alexander Yashin
-Version: v1.0-preprint
+**Author:** Alexander Yashin  
+**Version:** v1.0-preprint
 
-Overview
+## Overview
+
 
 The Ontology of Continua (OC) is a unified axiomatic framework describing
 the emergence, persistence and collapse of structured systems across
