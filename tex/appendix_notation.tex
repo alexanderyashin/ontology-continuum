@@ -1,1 +1,142 @@
-% appendix_notation placeholder
+% appendix_notation.tex
+% Core v2.5 — Appendix D: Notation and Symbol Glossary
+
+\section{Appendix D: Notation and Symbol Glossary}
+\label{sec:appendix-notation}
+
+This appendix defines all symbols, functions, operators, and sets used in the
+Continuum Framework.  
+It serves as a reference for the mathematical notation used throughout all
+chapters and appendices.
+
+\subsection{Sets and Spaces}
+\label{subsec:appendix-notation-sets}
+
+\begin{itemize}
+  \item \(S(K)\) — state space of continuum \(K\).
+  \item \(\Omega(K)\subseteq S(K)\) — admissible states.
+  \item \(\partial\Omega(K)\subseteq S(K)\) — boundary of admissibility.
+  \item \(M_x\) — metaspace associated with \(K_x\).
+  \item \(\mathcal{A}_{A_j}\) — domain of axis \(A_j\).
+  \item \(\mathcal{D}_{P_i}\) — domain of potential \(P_i\).
+  \item \(\mathcal{D}_{\pi_i}\) — domain of parameter \(\pi_i\).
+  \item \(J_A,J_P,J_\Theta,J_J,J_C\) — index sets for components.
+\end{itemize}
+
+\subsection{Core Components}
+\label{subsec:appendix-notation-core}
+
+\begin{itemize}
+  \item \(A(K)=\{A_j\}\) — axes of difference.
+  \item \(P(K)=\{P_i\}\) — potentials.
+  \item \(\Theta(K)=\{\Theta_\ell\}\) — thresholds.
+  \item \(J(K)=\{J_m\}\) — flows.
+  \item \(C(K)=\{C_n\}\) — cycles.
+  \item \(k(K):\Omega(K)\to[0,1]\) — continuumness.
+  \item \(T(s)\) — structural tension in state \(s\).
+\end{itemize}
+
+\subsection{Operators}
+\label{subsec:appendix-notation-operators}
+
+\begin{itemize}
+  \item \(E\) — evolution operator.
+  \item \(\Psi_{x\rightarrow x+1}\) — transition operator.
+  \item \(F,G,H,Q,S,U\) — component evolution operators for the dynamics.
+  \item \(W\) — parameter evolution operator.
+\end{itemize}
+
+\subsection{Dynamics}
+\label{subsec:appendix-notation-dynamics}
+
+Differential relations:
+\begin{align*}
+  \frac{dA}{dt} &= F(A,P,\Theta,J,C,t), \\
+  \frac{dP}{dt} &= G(A,P,\Theta,J,C,t), \\
+  \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t), \\
+  \frac{dJ}{dt} &= Q(A,P,\Theta,J,C,t), \\
+  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t), \\
+  \frac{dk}{dt} &= U(A,P,\Theta,J,C,k,t), \\
+  \frac{d\Pi}{dt} &= W(A,P,\Theta,J,C,k,\Pi,t).
+\end{align*}
+
+\subsection{Temporal Quantities}
+\label{subsec:appendix-notation-time}
+
+\begin{itemize}
+  \item \(\tau_n\) — period of cycle \(C_n\).
+  \item \(\tau(K)\) — minimal cycle period:
+  \[
+    \tau(K)=\min_n \tau_n.
+  \]
+\end{itemize}
+
+\subsection{Dimensions}
+\label{subsec:appendix-notation-dim}
+
+\begin{itemize}
+  \item \(\dim K = |A(K)|\) — number of axes.
+  \item \(\Theta_{\mathrm{dim}}\) — dimensional threshold.
+  \item \(\mathrm{DoF}(K)\) — degrees of freedom of \(K\).
+\end{itemize}
+
+\subsection{Threshold Structures}
+\label{subsec:appendix-notation-thresholds}
+
+\begin{itemize}
+  \item Stability thresholds \(\Theta_{\mathrm{stab}}\).
+  \item Reaction thresholds \(\Theta_{\mathrm{react}}\).
+  \item Membrane thresholds \(\Theta_{\mathrm{mem}}\).
+  \item Spike thresholds \(\Theta_{\mathrm{spike}}\).
+  \item Cognitive thresholds \(\Theta_{\mathrm{cog}}\).
+  \item Cooperation thresholds \(\Theta_{\mathrm{coop}}\).
+  \item Semantic thresholds \(\Theta_{\mathrm{sem}}\).
+\end{itemize}
+
+\subsection{Tension}
+\label{subsec:appendix-notation-tension}
+
+\[
+  T : S(K)\to\mathbb{R}
+\]
+indicates structural tension.
+
+\subsection{Parameter Sets}
+\label{subsec:appendix-notation-params}
+
+\[
+  \Pi(K) = \{\pi_1,\dots,\pi_n\}.
+\]
+
+\subsection{Metaspace Conditions}
+\label{subsec:appendix-notation-meta}
+
+\[
+  \Omega(K_x)\subseteq\Omega(M_x), \qquad
+  A(K_x)\subseteq A(M_x).
+\]
+\[
+  \mathrm{DoF}(K_x)\le\mathrm{DoF}(M_{x+1}).
+\]
+
+\subsection{Glossary of Frequently Used Symbols}
+\label{subsec:appendix-notation-glossary}
+
+\begin{itemize}
+  \item \(s\) — state of the continuum.
+  \item \(\partial\Omega\) — boundary of admissibility.
+  \item \(L(s)=T(s)-\Theta(s)\) — landscape function.
+  \item \(p_c\) — percolation threshold.
+  \item \(V_{\mathrm{thr}}\) — voltage threshold.
+  \item \(D(m)\) — cognitive discrepancy.
+  \item \(T_{\mathrm{comm}}\) — communication tension.
+  \item \(T_{\mathrm{inst}}\) — institutional tension.
+\end{itemize}
+
+\subsection{Compact Summary}
+\label{subsec:appendix-notation-summary}
+
+This appendix provides a complete glossary of symbols across all levels
+\(K_0\) to \(K_{12}\).  
+It ensures consistency of notation and enables cross-level analysis using a
+single unified symbolic system.
