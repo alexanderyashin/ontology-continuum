@@ -1,1 +1,20 @@
-fig_phase_transition_ascii placeholder
+% -------------------------------------------------
+% Figure: Phase transition  (fig_phase_transition_ascii.txt)
+% -------------------------------------------------
+\begin{figure}[h!]
+  \centering
+  % ASCII diagram in figures/fig_phase_transition_ascii.txt
+  \caption{Generic phase transition in a continuum. 
+  The horizontal axis represents a control parameter (for example bond
+  probability $p$, osmotic pressure, excitation level or social load); 
+  the vertical axis represents either the continuumness $k$ or a derived
+  order parameter. 
+  Below the critical value, the continuum is either absent or fragmented
+  ($k=0$ or $k\approx 0$); at the critical threshold the boundary
+  $\partial\Omega(K)$ is crossed and a new phase with non-zero $k$ emerges,
+  often together with a new axis and higher effective dimension. 
+  The same structure is used to interpret percolation, membrane closure,
+  spike generation and social or civilisational breakdown as instances of
+  the same threshold logic.}
+  \label{fig:phase-transition}
+\end{figure}
