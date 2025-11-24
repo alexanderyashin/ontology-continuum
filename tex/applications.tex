@@ -1,264 +1,300 @@
 % applications.tex
-% Core v2.5 — Applications and Cross-Level Predictions
+% Core v2.5 — Applications and Cross-Level Predictions (Harmonised Extended Version)
 
 \section{Applications and Cross-Level Predictions}
 \label{sec:applications}
 
-The Continuum Framework provides a unified structural language that
-connects physical, chemical, biological, cognitive, social and
-civilisational systems.  
-This section gives concrete examples of how the universal template
+The Continuum Framework provides a unified structural language for analysing
+physical, chemical, biological, cognitive, social, civilisational and
+metatheoretical systems.  
+Although each domain has its own content and mechanisms, their continua share
+a common architecture governed by admissible sets, thresholds, cycles and
+continuumness:
 \[
-  K = (\Omega, A, P, \Theta, J, C, k)
+  K = (\Omega, A, P, \Theta, J, C, k).
 \]
-can be used to analyse, compare, and predict the behaviour of real
-systems across scientific domains.
+This section presents a harmonised set of cross-level applications that extend
+the compact predictions given in earlier sections but remain within the style
+of the Preprint.  
+Where appropriate, we provide explicit structural predictions and falsifiable
+consequences.
 
-Rather than focusing on phenomenological details, we highlight the
-structural aspects of continua: admissibility, thresholds, cycles and
-continuumness.  
-These features appear in surprisingly similar ways across levels
-\(K_0\)–\(K_{12}\).
+\newpage
+% ===============================================================
+\subsection{Percolation and Critical Connectivity ($K_2$)}
+% ===============================================================
 
-\subsection{Percolation and Critical Connectivity (\texorpdfstring{$K_2$}{K2})}
-\label{subsec:applications-k2}
+Percolation is the canonical example of a continuum governed by a single
+control parameter \(p\) and a sharp admissibility threshold:
+\[
+  T = p - p_c, \qquad
+  p_c = \Theta_{\mathrm{dim}}.
+\]
+Continuumness is the probability of belonging to the infinite cluster:
+\[
+  k_2(p) = P_\infty(p).
+\]
 
-In physics and network science, percolation is the canonical example
-of a phase transition arising from local connectivity.  
-In the continuum language:
-\begin{itemize}
-  \item The control parameter is the occupancy probability \(p\).
-  \item The order parameter is the continuumness \(k_2(p)\), the
-        probability that a randomly chosen node lies in the infinite
-        cluster.
-  \item The critical threshold is \(p_c\), where \(k_2\) becomes
-        strictly positive.
-\end{itemize}
+\paragraph{Prediction 1: Divergence of cycle periods.}
+As \(p\to p_c\), the minimal cycle period diverges:
+\[
+  \tau(K_2) \to +\infty.
+\]
+Thus, any system whose macroscopic behaviour depends on long-range
+connectivity---from magnetic systems to epidemic networks---exhibits critical
+slowing down as it approaches the boundary \(\partial\Omega(K_2)\).
 
-\paragraph{Prediction 1: Universality of cycle emergence.}
-Near the percolation threshold, the minimal cycle period \(\tau(K_2)\)
-diverges as correlation length increases.  
-Any system whose macroscopic behaviour depends on long-range
-connectivity will exhibit the same increase in \(\tau\) as it
-approaches the boundary \(\partial\Omega(K_2)\), even if the microscopic
-physics is entirely different.
+\paragraph{Prediction 2: Universal boundary curvature.}
+Near the threshold:
+\[
+  k_2(p) \sim (p - p_c)^\beta,
+\]
+a testable prediction linking structural tension to known critical exponents.
 
-This provides a structural explanation of critical slowing down in:
-\begin{itemize}
-  \item magnetic systems near the Curie point,
-  \item epidemic models near the epidemic threshold,
-  \item information cascades in networks,
-  \item congestion dynamics in traffic and communication systems.
-\end{itemize}
+\newpage
+% ===============================================================
+\subsection{Autocatalytic Networks and Chemical Closure ($K_3$)}
+% ===============================================================
 
-\subsection{Protocellular Stability and Osmotic Limits (\texorpdfstring{$K_4$}{K4})}
-\label{subsec:applications-k4}
+Autocatalytic reaction networks are continua where admissibility requires
+the existence of a closed RAF (Reflexively Autocatalytic and F-Generated)
+subnetwork.
 
-A protocell is viable only if its membrane withstands osmotic, chemical
-and mechanical stresses.  
-In the continuum model:
-\begin{itemize}
-  \item osmotic gradients are potentials \(P_{\mathrm{grad}}\),
-  \item membrane permeability is an axis \(A_{\mathrm{perm}}\),
-  \item membrane rupture is defined by thresholds
-        \(\Theta_{\mathrm{mem}}\),
-  \item metabolic loops are cycles \(C_4\),
-  \item protocellular integrity is measured by \(k_4(t)\).
-\end{itemize}
+\paragraph{Structural condition for closure.}
+An RAF exists when:
+\[
+  \rho_{\mathrm{cat}} \cdot \rho_{\mathrm{closure}}
+  \ge \Theta_{\mathrm{kas}},
+\]
+where \(\rho_{\mathrm{cat}}\) is catalytic coverage and
+\(\rho_{\mathrm{closure}}\) is food-set accessibility.
 
-\paragraph{Prediction 2: Linear instability of protocells near rupture.}
-When osmotic pressure approaches the membrane threshold
-\(\Theta_{\mathrm{mem}}\), structural tension grows linearly and the
-time to rupture obeys:
+\paragraph{Prediction 3: Sensitivity to single-reaction loss.}
+If any essential reaction is removed,
+\[
+  \Omega(K_3) \to \varnothing,
+\]
+implying collapse of the autocatalytic structure.  
+This is a falsifiable criterion for minimal chemical life.
+
+\paragraph{Prediction 4: Catalytic diversity lowers tension.}
+Increasing the diversity of catalysts decreases
+\(T_3 = \Delta G_{\mathrm{act}} - \Delta G_{\mathrm{cat}}\)
+and enlarges the admissible region \(\Omega(K_3)\).
+
+\newpage
+% ===============================================================
+\subsection{Protocellular Stability and Boundary Formation ($K_4$)}
+% ===============================================================
+
+Transition \(K_3 \to K_4\) marks the emergence of a membrane and a new
+dimension:
+\[
+  A_{\mathrm{in/out}} \in A(K_4).
+\]
+
+\paragraph{Structural condition for membrane viability.}
+A protocell survives if:
+\[
+  | \Delta\pi | \le \Theta_{\mathrm{osm}},
+  \qquad
+  T_{\mathrm{mem}} \le \Theta_{\mathrm{mem}}.
+\]
+
+\paragraph{Prediction 5: Linear approach to rupture.}
+As osmotic tension approaches the membrane threshold,
 \[
   \tau_{\mathrm{rupture}} \propto
-  \frac{1}{\Theta_{\mathrm{mem}} - T_{\mathrm{mem}}}.
+  (\Theta_{\mathrm{mem}} - T_{\mathrm{mem}})^{-1}.
 \]
-This relationship predicts that protocells under slow environmental
-changes exhibit a sudden collapse once tension surpasses the threshold,
-mirroring percolation-like transitions.
+This predicts sudden collapse after prolonged marginal stress.
 
-\paragraph{Prediction 3: Minimal cycle condition for viability.}
-A protocell with no stable metabolic cycle
-\(C_4\neq\varnothing\) cannot maintain gradients and therefore cannot
-keep \(k_4>0\).  
-This yields a general viability constraint across all models of early
-cellular life: at least one energy- or turnover-producing cycle must
-remain operational for the system to remain inside \(\Omega(K_4)\).
-
-\subsection{Neuronal Excitation and Spike Cycles (\texorpdfstring{$K_5$}{K5})}
-\label{subsec:applications-k5}
-
-In neuroscience, spike generation is a threshold phenomenon.  
-The continuum model formalises:
-\begin{itemize}
-  \item membrane potential \(V(t)\) as a potential,
-  \item channel states and synaptic weights as axes,
-  \item spike threshold as \(\Theta_{\mathrm{spike}}\),
-  \item ion currents as flows \(J_5\),
-  \item spike cycles as \(C_{\mathrm{spike}}\),
-  \item coherent network activity as \(k_5\).
-\end{itemize}
-
-\paragraph{Prediction 4: Universal spike onset condition.}
-Across all biophysically realistic neurons:
+\paragraph{Prediction 6: Minimal metabolic cycle.}
+Protocells require at least one stable metabolic cycle:
 \[
-  T_{\mathrm{exc}} \ge \Theta_{\mathrm{spike}}
-  \quad\Rightarrow\quad
-  \text{spike onset as a phase transition.}
+  C_4 \neq \varnothing \quad \Rightarrow \quad k_4 > 0.
 \]
-Regardless of specific ion-channel models, spike initiation corresponds
-to a structural crossing of the admissibility boundary
+This provides a model-independent viability condition for early life.
+
+\newpage
+% ===============================================================
+\subsection{Neuronal Excitation and Spike Cycles ($K_5$)}
+% ===============================================================
+
+Neural continua introduce an excitability axis and a spike threshold:
+\[
+  T_5 = V - V_{\mathrm{thr}} = V - \Theta_{\mathrm{spike}}.
+\]
+
+\paragraph{Prediction 7: Universal spike onset.}
+For all biophysically realistic neurons:
+\[
+  T_5 \ge 0 \quad \Rightarrow \quad
+  \text{spike initiation}.
+\]
+Thus spiking is a boundary-crossing phenomenon: a transition across
 \(\partial\Omega(K_5)\).
 
-\paragraph{Prediction 5: Stability requires cycle closure.}
-Neurons or networks that fail to complete the spike cycle
-(refractory return to baseline) leave \(\Omega(K_5)\).  
-Thus, certain pathological states (e.g.\ depolarisation block,
-epileptiform plateaus) are reinterpretations of \(k_5(t)\to 0\) due to
-loss of cycle closure.
-
-\subsection{Cognitive Collapse and Predictive Overload (\texorpdfstring{$K_6$}{K6})}
-\label{subsec:applications-k6}
-
-In cognitive systems:
-\begin{itemize}
-  \item internal models form axes \(A^{(6)}\),
-  \item prediction error is a potential,
-  \item cognitive thresholds \(\Theta_{\mathrm{PE}}\) determine when
-        models must be revised,
-  \item belief updates are flows \(J_6\),
-  \item attractor cycles are \(C_6\),
-  \item effective cognition corresponds to \(k_6>0\).
-\end{itemize}
-
-\paragraph{Prediction 6: Cognitive overload as threshold crossing.}
-If prediction error exceeds \(\Theta_{\mathrm{PE}}\), internal models
-collapse or are replaced.  
-This formalises cognitive overload and disorganisation as a structural
-phase transition:
+\paragraph{Prediction 8: Cycle failure predicts pathological states.}
+If the spike cycle cannot close (e.g.\ depolarisation block):
 \[
-  D(m) > \Theta_{\mathrm{PE}}
+  C_{\mathrm{spike}} = \varnothing
   \quad\Rightarrow\quad
-  k_6 \to 0.
+  k_5 \to 0.
 \]
+A formal explanation of seizures and runaway excitability follows from the
+collapse of cycles.
 
-\paragraph{Prediction 7: Minimal-connectivity condition for coherent thought.}
-The Framework predicts that cognitive continua require a largest
-component of model interconnections of size:
+\paragraph{Prediction 9: Conductance--frequency relation.}
+Increasing sodium conductance reduces tension \(T_5\) and shortens
+\(\tau_{\mathrm{spike}}\), predicting the universal direction of
+frequency changes under channel modulation.
+
+\newpage
+% ===============================================================
+\subsection{Cognitive Systems and Predictive Thresholds ($K_6$)}
+% ===============================================================
+
+Cognitive continua are defined by internal models, prediction errors and
+attractor cycles.
+
+\paragraph{Structural tension.}
 \[
-  \lvert C_{\max}^{(6)} \rvert
-  \ge \alpha \lvert \mathcal{M} \rvert,
+  T_6 = D(m) - \Theta_{\mathrm{PE}},
 \]
-where \(\alpha\) is a universal constant bounded between 0.2 and 0.4.
-Below this value, cognition fragments into disconnected subsystems.
+where \(D(m)\) is the prediction discrepancy.
 
-\subsection{Institutions and Social Collapse (\texorpdfstring{$K_7$}{K7})}
-\label{subsec:applications-k7}
+\paragraph{Prediction 10: Cognitive overload.}
+When:
+\[
+  D(m) > \Theta_{\mathrm{PE}},
+\]
+the model becomes inadmissible and collapses, reducing \(k_6\).  
+This formalises disorganisation, confusion and model failure.
 
-Social continua depend on communication coherence, shared norms and
+\paragraph{Prediction 11: Minimal model-connectivity for coherence.}
+Coherent cognition requires:
+\[
+  |C_{\max}^{(6)}| \ge \alpha |\mathcal{M}|,
+  \quad \alpha\in[0.2,0.4].
+\]
+Below this threshold, thought fragments into disconnected subsystems.
+
+\paragraph{Prediction 12: Alignment window for artificial agents.}
+Agents remain aligned if:
+\[
+  D(m_{\mathrm{agent}}) \le \Theta_{\mathrm{PE}}.
+\]
+Misalignment is a structural boundary violation.
+
+\newpage
+% ===============================================================
+\subsection{Social Systems, Norms and Institutional Cycles ($K_7$)}
+% ===============================================================
+
+Social continua require role structures, communication flows and
 institutional cycles.
 
-\paragraph{Prediction 8: Collapse via cycle interruption.}
-If an institutional cycle \(C_{\mathrm{inst}}\) loses one of its
-necessary stages (formation, codification, enforcement, revision),
-the system exits \(\Omega(K_7)\).  
-Thus, institutional breakdown is equivalent to
+\paragraph{Prediction 13: Institutional collapse as cycle loss.}
+If any stage of the institutional cycle fails:
 \[
   C_{\mathrm{inst}} = \varnothing
   \quad\Rightarrow\quad
   k_7 = 0.
 \]
 
-\paragraph{Prediction 9: Social stress exhibits hysteresis.}
-Due to the cycle-based nature of \(K_7\), reducing external stress does
-not automatically restore pre-collapse dynamics.  
-The Framework predicts a hysteresis loop in the recovery of \(k_7\),
-analogous to civilisational hysteresis in \(K_8\).
-
-\subsection{Civilisational Stability and Long Waves (\texorpdfstring{$K_8$}{K8})}
-\label{subsec:applications-k8}
-
-Civilisations maintain a non-zero \(k_8\) by sustaining cycles such as:
-\begin{itemize}
-  \item food and energy production,
-  \item infrastructure maintenance,
-  \item administrative and legal reproduction,
-  \item symbolic and cultural continuity.
-\end{itemize}
-
-\paragraph{Prediction 10: Collapse when civilisational tension exceeds thresholds.}
-Let \(T_8\) be the civilisational tension—a composite measure of
-resource stress, institutional overload and infrastructural fragility.
-The Framework predicts:
+\paragraph{Prediction 14: Communication asymmetry induces instability.}
+If communication flows diminish:
 \[
-  T_8 > \Theta_{\mathrm{stab}}
+  J_{\mathrm{comm}} \downarrow \quad \Rightarrow \quad k_7 \downarrow.
+\]
+Polarisation is predicted as a monotonic function of communication failure.
+
+\paragraph{Prediction 15: Hysteresis in recovery.}
+Even after tension decreases, cycles may not immediately reform.
+Thus the system exhibits hysteresis analogous to phase transitions with
+memory.
+
+\newpage
+% ===============================================================
+\subsection{Civilisational Thresholds and Long-Wave Dynamics ($K_8$)}
+% ===============================================================
+
+Civilisational continua combine infrastructure, institutions and
+technological systems.
+
+\paragraph{Structural tension.}
+\[
+  T_8 = T_{\mathrm{inst}} - \Theta_{\mathrm{stab}}.
+\]
+
+\paragraph{Prediction 16: Civilisational collapse.}
+When infrastructural load exceeds capacity:
+\[
+  F_{\mathrm{load}} > \Theta_{\mathrm{cap}}
   \quad\Rightarrow\quad
-  \text{systemic collapse or reorganisation.}
+  k_8\to 0.
 \]
 
-\paragraph{Prediction 11: Long-wave oscillations from cycle interaction.}
-Interference of multiple stabilising cycles \(C_8\) produces long-wave
-dynamics (50–200 year cycles) that appear in historical data.  
-These oscillations are structurally equivalent to neural rhythms in
-\(K_5\) or metabolic cycles in \(K_4\).
-
-\subsection{Metatheoretical and Semantic Stability (\texorpdfstring{$K_9$--$K_{11}$}{K9--K11})}
-\label{subsec:applications-k9-k11}
-
-The Framework predicts cross-level analogies between theoretical,
-semantic and physical stability.
-
-\paragraph{Prediction 12: Paradigm stability requires cycle closure.}
-Scientific paradigms correspond to cycles of theory creation,
-prediction, testing and correction.  
-If this cycle breaks, \(\Omega(K_9)\) collapses and the paradigm must
-transition to a new one.
-
-\paragraph{Prediction 13: Semantic drift as threshold process.}
-Meaning systems lose coherence when ambiguity exceeds semantic
-thresholds \(\Theta_{\mathrm{sem}}\).  
-Thus semantic drift is the analogue of cognitive collapse or membrane
-rupture.
-
-\subsection{Artificial Systems and Integration (\texorpdfstring{$K_{12}$}{K12})}
-\label{subsec:applications-k12}
-
-In artificial systems, continua appear in:
-\begin{itemize}
-  \item distributed AI systems,
-  \item multi-agent reinforcement learning,
-  \item large-scale computational infrastructures.
-\end{itemize}
-
-\paragraph{Prediction 14: Integration requires cross-level coherence.}
-Artificial systems embedded in human environments must satisfy:
+\paragraph{Prediction 17: Long-wave oscillations.}
+Interactions of cycles \(C_8\) generate long temporal waves:
 \[
-  \Omega(K_{\mathrm{artificial}}) \subseteq \Omega(K_{12})
+  \tau_{C_8} \sim \tau_{\mathrm{innovation}}.
 \]
-for stable integration.  
-Violations correspond to misalignment, instability or unintended
-behaviour.
+This structurally unifies socio-economic long waves with neural and
+metabolic rhythms.
 
-\paragraph{Prediction 15: Artificial collapse mirrors natural collapse.}
-If agent interactions fail to maintain internal cycles (coordination,
-consensus, update, correction), artificial systems undergo collapse
-structurally identical to that of institutions or civilisations.
+\newpage
+% ===============================================================
+\subsection{Metatheoretical, Semantic and Integrative Continua ($K_9$--$K_{12}$)}
+% ===============================================================
 
-\subsection{Summary of Cross-Level Analogies}
-\label{subsec:applications-summary}
+Higher continua describe theories, metamodels, semantic systems and
+global integrative structures.
 
-Despite differences in content and scale, many systems share:
+\paragraph{Prediction 18: Paradigm shift criterion ($K_9$).}
+A paradigm changes when empirical anomaly tension exceeds a threshold:
+\[
+  T_9 \ge \Theta_{\mathrm{shift}}.
+\]
+
+\paragraph{Prediction 19: Functorial coherence threshold ($K_{10}$).}
+Metamodels remain stable if functorial compatibility satisfies:
+\[
+  \mathrm{coh} \ge \Theta_{\mathrm{coh}}.
+\]
+
+\paragraph{Prediction 20: Semantic drift and collapse ($K_{11}$).}
+If ambiguity exceeds the semantic threshold:
+\[
+  T_{11} > \Theta_{\mathrm{sem}}
+  \quad\Rightarrow\quad k_{11}\to 0.
+\]
+
+\paragraph{Prediction 21: Global integration ($K_{12}$).}
+The meta-integrative continuum exists only if:
+\[
+  C_{12}\neq\varnothing
+  \quad\text{and}\quad
+  \Omega(K_{12})\neq\varnothing.
+\]
+
+\newpage
+% ===============================================================
+\subsection{Compact Cross-Level Analogies}
+% ===============================================================
+
+Across all continua \(K_0\)–\(K_{12}\), the Framework predicts that:
 \begin{itemize}
-  \item threshold-induced phase transitions,
-  \item cycle-based temporal structure,
-  \item an order parameter measuring coherence (continuumness),
-  \item admissible-state boundaries and collapse conditions.
+  \item phase transitions occur at structural thresholds,
+  \item cycle existence determines stability,
+  \item continuumness serves as a universal order parameter,
+  \item collapse is always loss of admissibility or loss of cycles,
+  \item dimension arises only under tension exceeding
+        \(\Theta_{\mathrm{dim}}\),
+  \item cross-level mappings preserve admissibility via metaspace.
 \end{itemize}
 
-These analogies make it possible to import results from one domain
-(percolation, membrane physics, neuronal spiking, social systems,
-civilisational models) into others in a controlled and formally
-well-defined way.  
-The Continuum Framework therefore serves not only as a theoretical
-unification, but also as a generator of cross-domain predictions.
+This structural unity allows importing results between domains and yields
+a powerful predictive apparatus for complex systems.
+
