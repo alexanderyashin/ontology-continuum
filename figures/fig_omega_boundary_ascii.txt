@@ -1,1 +1,19 @@
-fig_omega_boundary_ascii placeholder
+% -------------------------------------------------
+% Figure: Omega-boundary  (fig_omega_boundary_ascii.txt)
+% -------------------------------------------------
+\begin{figure}[h!]
+  \centering
+  % ASCII diagram in figures/fig_omega_boundary_ascii.txt
+  \caption{Admissible region $\Omega(K)$ and its boundary $\partial\Omega(K)$. 
+  The interior region represents all states $s$ for which potentials, axes,
+  thresholds, flows and cycles satisfy the admissibility conditions of
+  Definition~\ref{subsec:foundations-omega}. 
+  The curve labelled $\partial\Omega(K)$ marks the locus where at least one
+  threshold is saturated, $T(s)=0$ or a potential/axis touches the edge of its
+  domain. 
+  Points outside the curve correspond to structurally forbidden states with
+  $T(s)>0$, where the continuum cannot exist. 
+  The figure provides the geometric intuition for structural tension and
+  phase transitions used throughout the hierarchy.}
+  \label{fig:omega-boundary}
+\end{figure}
