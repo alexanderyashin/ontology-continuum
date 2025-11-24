@@ -1,1 +1,162 @@
-% continuity placeholder
+% continuity.tex
+% Core v2.5 — Continuity Conditions Across Levels
+
+\section{Continuity Across Levels}
+\label{sec:continuity}
+
+This section formalises the continuity relations between successive levels
+\(K_x \rightarrow K_{x+1}\) and the associated metaspaces \(M_{x+1}\).
+Continuity ensures that the emergence of each higher-level continuum
+respects the fundamental constraints imposed by its predecessor.
+
+\subsection{Continuity Definition}
+\label{subsec:continuity-definition}
+
+Each level transition is governed by an operator
+\[
+  \Psi_{x \rightarrow x+1} : K_x \to K_{x+1},
+\]
+mapping states, axes, potentials, thresholds, flows, cycles, and
+continuity data from one level to the next.
+
+A transition is \emph{continuous} if and only if:
+
+\begin{enumerate}
+  \item \textbf{Admissibility preservation:}
+    \[
+      \Omega(K_x) \subseteq \Omega(M_{x+1}).
+    \]
+
+  \item \textbf{Axis extension:}
+    \[
+      A(K_x) \subseteq A(K_{x+1})
+    \]
+    and new axes appear only due to structural incompatibilities
+    unresolvable within \(K_x\).
+
+  \item \textbf{Threshold inheritance:}
+    Thresholds of \(K_x\) remain valid constraints in \(K_{x+1}\);
+    new thresholds \(\Theta_{x+1}\) appear only when required
+    to stabilise new axes.
+
+  \item \textbf{Cycle mapping:}
+    Persistent cycles of \(K_x\) become sub-cycles of the cycles
+    of \(K_{x+1}\):
+    \[
+      C(K_x) \subseteq C(K_{x+1}).
+    \]
+
+  \item \textbf{Continuity of \(k\):}
+    \[
+      k_x > 0 \implies k_{x+1} > 0.
+    \]
+\end{enumerate}
+
+\subsection{Emergence of New Dimensions}
+\label{subsec:continuity-dim}
+
+Let \(\dim K_x\) denote the dimension of \(K_x\).
+A dimension increase occurs when:
+
+\begin{enumerate}
+  \item A class of differences appears which cannot be represented on
+    the existing axes of \(K_x\).
+
+  \item Structural tension exceeds the dimensional threshold:
+    \[
+      T_x \ge \Theta^{\mathrm{dim}}_x.
+    \]
+
+  \item The metaspace \(M_{x+1}\) contains admissible configurations
+    for the extended set of axes.
+\end{enumerate}
+
+Then:
+\[
+  \dim K_{x+1} = \dim K_x + 1.
+\]
+
+\subsection{Collapse Conditions}
+\label{subsec:continuity-collapse}
+
+A continuum \(K_x\) collapses if:
+
+\begin{enumerate}
+  \item All thresholds are violated:
+    \[
+      T(s) > \Theta(s) \quad \forall s \in S(K_x).
+    \]
+
+  \item No viable cycles remain:
+    \[
+      C(K_x) = \varnothing.
+    \]
+
+  \item The admissible region is empty:
+    \[
+      \Omega(K_x)=\varnothing.
+    \]
+\end{enumerate}
+
+In this case,
+\[
+  k_x = 0.
+\]
+
+\subsection{Continuity Chain}
+\label{subsec:continuity-chain}
+
+The entire hierarchy satisfies the global continuity chain
+\[
+  K_0 \xrightarrow{\Psi_{0 \rightarrow 1}} K_1
+     \xrightarrow{\Psi_{1 \rightarrow 2}} K_2
+     \xrightarrow{\Psi_{2 \rightarrow 3}} K_3
+     \xrightarrow{\Psi_{3 \rightarrow 4}} K_4
+     \xrightarrow{\Psi_{4 \rightarrow 5}} K_5
+     \xrightarrow{\Psi_{5 \rightarrow 6}} K_6
+     \xrightarrow{\Psi_{6 \rightarrow 7}} K_7
+     \xrightarrow{\Psi_{7 \rightarrow 8}} K_8
+     \xrightarrow{\Psi_{8 \rightarrow 9}} K_9
+     \xrightarrow{\Psi_{9 \rightarrow 10}} K_{10}
+     \xrightarrow{\Psi_{10 \rightarrow 11}} K_{11}
+     \xrightarrow{\Psi_{11 \rightarrow 12}} K_{12}.
+\]
+
+At each step,
+\[
+  k_x > 0 \ \Rightarrow\ k_{x+1} > 0,
+\]
+and dimensions grow monotonically unless collapse occurs.
+
+\subsection{Minimal Conditions for Transition}
+\label{subsec:continuity-minimal}
+
+A transition \(K_x \to K_{x+1}\) is possible if and only if:
+
+\begin{enumerate}
+  \item \(\Omega(K_x) \neq \varnothing\).
+  \item Structural tension satisfies:
+    \[
+      T_x \in [0, \Theta^{\mathrm{dim}}_x].
+    \]
+  \item A new axis \(A_{x+1}\) resolves incompatibilities in \(K_x\).
+  \item \(M_{x+1}\) provides admissible states for the extended system.
+\end{enumerate}
+
+\subsection{Compact Summary}
+\label{subsec:continuity-summary}
+
+Continuity across levels is enforced by:
+
+\begin{itemize}
+  \item preservation of admissibility,
+  \item faithful lifting of axes, potentials, and thresholds,
+  \item persistence of cycles,
+  \item compatibility with the metaspace,
+  \item monotonic growth of dimension,
+  \item non-zero continuity of the successor,
+  \item and collapse only via loss of cycles and violation of all thresholds.
+\end{itemize}
+
+Together these conditions guarantee that the entire hierarchy
+\(K_0 \to K_{12}\) forms a coherent unified structure.
