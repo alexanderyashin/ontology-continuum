@@ -4,125 +4,143 @@
 \section{Appendix A: Core Mathematical Definitions}
 \label{sec:appendix-core}
 
-This appendix provides the formal mathematical definitions underlying the
-Continuum Framework. It expands the compact core specification
+This appendix expands the compact definition
 \[
   K = (\Omega, A, P, \Theta, J, C, k)
 \]
-into explicit structures suitable for mathematical analysis.
+into precise mathematical structures consistent with the unified formulation
+used throughout the Continuum Framework.
 
 \subsection{State Space}
 \label{subsec:appendix-core-state}
 
-Each continuum \(K\) possesses a state space
+Each continuum \(K\) possesses a state space \(S(K)\), which may be continuous,
+discrete, hybrid or symbolic.  
+The \emph{admissible region} is a subset
 \[
-  S(K),
+  \Omega(K)\subseteq S(K),
 \]
-which may be discrete, continuous, mixed, or categorical.
-The admissible region is a subset \(\Omega(K)\subseteq S(K)\).
+defined by bounded tension and valid axis/potential domains.
 
 \subsection{Axes of Difference}
 \label{subsec:appendix-core-axes}
 
-Axes are measurable or distinguishable coordinates:
+Axes represent independent structural distinctions:
 \[
-  A_j : S(K) \to \mathcal{A}_{A_j}.
+  A_j : S(K) \to \mathcal{A}_j.
 \]
-The set of all axes is:
+The full axis set is
 \[
-  A(K) = \{ A_j \}_{j \in J_A}.
+  A(K)=\{A_j\}_{j\in J_A}.
 \]
 
 \subsection{Potentials}
 \label{subsec:appendix-core-potentials}
 
-Potentials quantify forces or constraints:
+Potentials encode intensities, forces or resource levels:
 \[
-  P_i : S(K) \to \mathcal{D}_{P_i}.
+  P_i : S(K)\to \mathcal{D}_{P_i}.
 \]
+Domains \(\mathcal{D}_{P_i}\subseteq\mathbb{R}\) may include boundary points.
 
 \subsection{Thresholds}
 \label{subsec:appendix-core-thresholds}
 
-Thresholds define admissibility boundaries:
+Thresholds impose admissibility constraints:
 \[
-  \Theta_\ell : S(K) \to \mathbb{R}.
+  \Theta_\ell : S(K)\to\mathbb{R}.
 \]
-All thresholds form a vector:
+The complete threshold vector is:
 \[
-  \vec{\Theta} = (\Theta_\ell)_{\ell\in J_\Theta}.
+  \vec{\Theta}=(\Theta_\ell)_{\ell\in J_\Theta}.
 \]
 
 \subsection{Flows}
 \label{subsec:appendix-core-flows}
 
-Flows describe transport or influence:
+Flows describe transfers, interactions or causal propagation:
 \[
-  J_m : S(K)\times\mathbb{R} \to \mathcal{F}_m.
+  J_m : S(K)\times \mathbb{R}\to\mathcal{F}_m.
 \]
-Set of flows:
+All flows:
 \[
-  J(K) = \{J_m\}_{m\in J_J}.
+  J(K)=\{J_m\}_{m\in J_J}.
 \]
 
 \subsection{Cycles}
 \label{subsec:appendix-core-cycles}
 
-Cycles are closed trajectories:
+Cycles are recurrent trajectories:
 \[
-  C_n : [0,\tau_n] \to S(K),
-  \qquad C_n(0)=C_n(\tau_n).
+  C_n : [0,\tau_n]\to S(K),\qquad C_n(0)=C_n(\tau_n).
 \]
+Cycles reflect structural self-maintenance.
 
 \subsection{Continuumness}
 \label{subsec:appendix-core-k}
 
-Continuumness is:
+Continuumness quantifies system viability:
 \[
-  k : \Omega(K)\to[0,1].
+  k : S(K)\to[0,1],
+\]
+with
+\[
+  k=0 \iff \Omega(K)=\varnothing \ \text{or}\ C(K)=\varnothing.
 \]
 
 \subsection{Structural Tension}
 \label{subsec:appendix-core-tension}
 
-Structural tension is a scalar or vector field:
+Tension encodes deviation from admissibility:
 \[
-  T : S(K)\to\mathbb{R},
+  T : S(K)\to\mathbb{R}.
 \]
-with sign indicating whether thresholds are satisfied:
+Using tension components \(T_\ell\) and thresholds \(\Theta_\ell\),
 \[
-  T(s)\le0 \Rightarrow s\in\Omega(K), \qquad
-  T(s)=0 \Rightarrow s\in\partial\Omega(K).
+  T(s)=\max_\ell\bigl(T_\ell(s)-\Theta_\ell(s)\bigr).
+\]
+Thus:
+\[
+  T(s)\le0 \;\Rightarrow\; s\in\Omega(K),\qquad
+  T(s)=0 \;\Rightarrow\; s\in\partial\Omega(K).
 \]
 
 \subsection{Boundary of Admissibility}
 \label{subsec:appendix-core-boundary}
 
+The boundary consists of states saturating constraints:
 \[
-  \partial\Omega(K) =
-  \bigl\{ s \in S(K) \ \big|\ 
-    T(s)=0 \lor 
-    P_i(s)\in\partial\mathcal{D}_{P_i} \lor
-    A_j(s)\in\partial\mathcal{A}_{A_j}
-  \bigr\}.
+  \partial\Omega(K)
+  =
+  \left\{
+    s :
+      T(s)=0
+      \;\lor\;
+      P_i(s)\in\partial\mathcal{D}_{P_i}
+      \;\lor\;
+      A_j(s)\in\partial\mathcal{A}_j
+  \right\}.
 \]
 
-\subsection{Evolution Operator}
+\subsection{Unified Evolution System}
 \label{subsec:appendix-core-evolution}
 
-Dynamics are governed by:
-\[
-  E : K(t)\mapsto K(t+\Delta t),
-\]
-with component-wise updates:
+Dynamics of a continuum are governed by the unified operator family
+\((F,G,H,Q,S,U)\):
 \begin{align*}
-  \frac{dA}{dt} &= F(A,P,\Theta,J,C,t), \\
-  \frac{dP}{dt} &= G(A,P,\Theta,J,C,t), \\
-  \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t), \\
-  \frac{dJ}{dt} &= Q(A,P,\Theta,J,C,t), \\
-  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t), \\
-  \frac{dk}{dt} &= U(A,P,\Theta,J,C,k,t).
+  \frac{dA}{dt} &= F(A,P,\Theta,J,C,t),\\
+  \frac{dP}{dt} &= G(A,P,\Theta,J,C,t),\\
+  \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t),\\
+  \frac{dT}{dt} &= Q(A,P,\Theta,J,C,T,t),\\
+  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t),\\
+  \frac{dk}{dt} &= U(A,P,\Theta,J,C,T,k,t).
 \end{align*}
+
+The system evolves as
+\[
+  K(t)=K_0 + \int_0^t E(\tau)\,d\tau,
+\]
+where \(E\) collects the six componentwise operators above.
 
 \subsection{Time Scale}
 \label{subsec:appendix-core-time}
@@ -131,15 +149,15 @@ If cycles exist:
 \[
   \tau(K)=\min_n \tau_n.
 \]
-Otherwise:
+If no cycles exist:
 \[
-  \tau(K)=+\infty, \qquad k=0.
+  \tau(K)=+\infty,\qquad k=0.
 \]
 
 \subsection{Dimension}
 \label{subsec:appendix-core-dimension}
 
-Dimension is defined via the number of independent axes:
+Structural dimension is:
 \[
   \dim K = |A(K)|.
 \]
@@ -147,37 +165,48 @@ Dimension is defined via the number of independent axes:
 \subsection{Dimension Growth}
 \label{subsec:appendix-core-dim-growth}
 
-A new dimension emerges when:
+A new dimension appears during \(K_x\to K_{x+1}\) when:
 \[
-  T\ge \Theta_{\mathrm{dim}}
-  \quad\text{and}\quad
-  \Omega(K_x)\subseteq\Omega(M_{x+1}).
+  T_x(s)\ge\Theta_x^{\mathrm{dim}}
+  \quad\text{for some } s\in\Omega_x,
+\]
+and
+\[
+  \Omega_x,\Omega_{x+1}\subseteq\Omega(M_{x+1}).
+\]
+Then:
+\[
+  \dim K_{x+1} = \dim K_x + 1.
 \]
 
 \subsection{Collapse Conditions}
 \label{subsec:appendix-core-collapse}
 
-Collapse occurs if:
+A continuum collapses if:
 \[
-  \Omega=\varnothing
+  \Omega(K)=\varnothing
   \quad\text{or}\quad
-  C=\varnothing.
+  C(K)=\varnothing,
+\]
+or if
+\[
+  T(s)>\Theta(s)\quad\forall s\in S(K).
 \]
 
 \subsection{Compatibility with Metaspace}
 \label{subsec:appendix-core-compatibility}
 
-For existence:
+Existence requires:
 \[
-  \Omega(K_x)\subseteq\Omega(M_x).
+  \Omega(K_x)\subseteq \Omega(M_x),\qquad A(K_x)\subseteq A(M_x).
 \]
 
 \subsection{Compact Summary}
 \label{subsec:appendix-core-summary}
 
-This appendix formalises all core components:
+This appendix formalises the core objects
 \[
-  S,\Omega,A,P,\Theta,J,C,k,T,\partial\Omega,E,\tau,\dim.
+  S,\Omega,A,P,\Theta,J,C,k,T,\partial\Omega,\tau,\dim
 \]
-These definitions provide the mathematical foundation of every level
-\(K_0\) through \(K_{12}\).
+and the unified dynamics \((F,G,H,Q,S,U)\), forming the mathematical basis
+for every level \(K_0\) through \(K_{12}\).
