@@ -1,145 +1,178 @@
 % appendix_figures.tex
-% Core v2.5 — Appendix G: Figures, Diagrams, and Structural Maps
-%
-% Note: This appendix currently contains textual descriptions of the
-% core figures. Diagram source code (TikZ or external graphics) can be
-% added later without affecting the logical structure of the paper.
+% Core v2.5 — Appendix G: ASCII Figures
 
-\section{Appendix G: Figures and Structural Maps}
-\label{sec:appendix-figures}
+\section*{Appendix G: Figures}
+\addcontentsline{toc}{section}{Appendix G: Figures}
 
-This appendix documents the conceptual figures that accompany the
-Continuum Framework.  
-For the purposes of the GitHub build and automated compilation, we use
-textual descriptions instead of in-document TikZ code.  
-Diagram source files (for example \texttt{.tex} or \texttt{.pdf}) can be
-maintained separately in a dedicated graphics directory.
+This appendix contains schematic ASCII diagrams illustrating the structure of the Ontology of Continuum (Core v2.5). All figures are text–only and require no external packages.
 
-\subsection{Figure 1: Universal Architecture of a Continuum}
-\label{subsec:appendix-figures-architecture}
+% -------------------------------------------------------------
+\subsection*{G.1 Universal Architecture of a Continuum}
+\label{fig:universal_architecture}
 
-\textbf{Concept.}  
-The first figure visualises the universal architecture of a continuum
-\[
-  K = \bigl( \Omega, A, P, \Theta, J, C, k \bigr).
-\]
+\begin{verbatim}
+                  +-------------------------------+
+                  |           Continuum K         |
+                  +-------------------------------+
+                  |   Omega(K): admissible states |
+                  |   A:      axes of difference  |
+                  |   P:      potentials          |
+                  |   Theta:  thresholds          |
+                  |   J:      flows               |
+                  |   C:      cycles              |
+                  |   k(t):   continuity measure  |
+                  +-------------------------------+
+\end{verbatim}
 
-\textbf{Structure.}
-\begin{itemize}
-  \item Central node: the admissible set \(\Omega(K)\).
-  \item Surrounding nodes: axes \(A\), potentials \(P\),
-        thresholds \(\Theta\), flows \(J\), cycles \(C\),
-        and continuumness \(k\).
-  \item Arrows from \(A, P, \Theta, J, C, k\) into \(\Omega(K)\)
-        represent that these components jointly determine which states
-        belong to the admissible region.
-  \item A separate node for the boundary \(\partial\Omega(K)\) with an
-        arrow labelled ``critical'' indicates that the boundary is
-        reached whenever structural tension hits the relevant thresholds.
-\end{itemize}
+\bigskip
 
-\textbf{Intended use.}  
-This figure provides an at-a-glance map of the universal template that
-is instantiated at all levels \(K_0\) to \(K_{12}\).
+% -------------------------------------------------------------
+\subsection*{G.2 Transition Operator Psi (K_x → K_{x+1})}
+\label{fig:transition_operator}
 
-\subsection{Figure 2: Transition Operator \texorpdfstring{\(\Psi_{x \rightarrow x+1}\)}{Psi}}
-\label{subsec:appendix-figures-psi}
+\begin{verbatim}
+     +--------------+     Psi_{x→x+1}     +---------------------+
+     |   K_x        |  ----------------->  |     K_{x+1}         |
+     +--------------+                      +---------------------+
+       Omega_x                                   Omega_{x+1}
+       A_x                                       A_{x+1}
+       P_x            Birth of new axis          P_{x+1}
+       Theta_x  ----------------------------->   Theta_{x+1}
+       C_x                                       C_{x+1}
+       k_x(t)                                    k_{x+1}(t)
+\end{verbatim}
 
-\textbf{Concept.}  
-The second figure depicts the transition operator
-\(\Psi_{x \rightarrow x+1}\) that maps one level \(K_x\)
-to the next level \(K_{x+1}\) in the hierarchy.
+\bigskip
 
-\textbf{Structure.}
-\begin{itemize}
-  \item Two boxes labelled \(K_x\) and \(K_{x+1}\).
-  \item A directed arrow from \(K_x\) to \(K_{x+1}\) labelled
-        \(\Psi_{x \rightarrow x+1}\).
-\end{itemize}
+% -------------------------------------------------------------
+\subsection*{G.3 K0–K12 Ladder}
+\label{fig:k_ladder}
 
-\textbf{Intended use.}  
-The diagram emphasises that each level is not independent but is
-generated via a structured transition that respects admissibility and
-metaspace constraints.
+\begin{verbatim}
+ K12  Artificial Meta-Systems
+ K11  Multi-Agent Systems
+ K10  Meta-Models
+ K9   Meta-Theories
+ K8   Civilizational Systems
+ K7   Social Systems
+ K6   Cognitive Systems
+ K5   Neural Systems
+ K4   Cellular Systems
+ K3   Chemical Reaction Networks
+ K2   Percolation / Phase Continuity
+ K1   One-Dimensional Continuum
+ K0   Meta-Logical Substrate
+\end{verbatim}
 
-\subsection{Figure 3: Hierarchy of Levels \texorpdfstring{\(K_0\)–\(K_{12}\)}{K0–K12}}
-\label{subsec:appendix-figures-hierarchy}
+\bigskip
 
-\textbf{Concept.}  
-The third figure shows the vertical hierarchy from the metalogical base
-level \(K_0\) up to the meta-integrative level \(K_{12}\).
+% -------------------------------------------------------------
+\subsection*{G.4 Boundary and Omega / Partial-Omega Structure}
+\label{fig:omega_boundary}
 
-\textbf{Structure.}
-\begin{itemize}
-  \item A vertical stack of boxes labelled
-        \(K_0, K_1, \dots, K_{12}\).
-  \item Arrows from \(K_x\) to \(K_{x+1}\) for all
-        \(x = 0,\dots,11\).
-\end{itemize}
+\begin{verbatim}
+              +-------------------------------------+
+              |            Omega(K)                  |
+              |  (all admissible states)            |
+              |                                     |
+              |   +-----------------------------+   |
+              |   |     interior(Omega)         |   |
+              |   | cycles C ≠ ∅                |   |
+              |   +-----------------------------+   |
+              |                                     |
+              +-------------------------------------+
+                       ^ boundary: ∂Omega(K)
+\end{verbatim}
 
-\textbf{Intended use.}  
-This figure acts as the ``skeleton'' of the continuum hierarchy and is
-referenced throughout the manuscript when discussing cross-level
-relations and transitions.
+\bigskip
 
-\subsection{Figure 4: Boundary \texorpdfstring{\(\partial\Omega\)}{dOmega} as Threshold Surface}
-\label{subsec:appendix-figures-boundary}
+% -------------------------------------------------------------
+\subsection*{G.5 Phase Transition / Threshold Crossing}
+\label{fig:phase_transition}
 
-\textbf{Concept.}  
-The fourth figure illustrates the admissible boundary
-\(\partial\Omega(K)\) in an abstract state space.
+\begin{verbatim}
+                   T(t) < Theta    → stable
+                   T(t) = Theta    → critical
+                   T(t) > Theta    → breakdown
 
-\textbf{Structure.}
-\begin{itemize}
-  \item A smooth curve representing the boundary
-        \(\partial\Omega(K)\).
-  \item Sample points:
-        \begin{itemize}
-          \item A point clearly inside the boundary,
-                labelled \(s \in \Omega(K)\).
-          \item A point on the boundary,
-                labelled \(s \in \partial\Omega(K)\).
-        \end{itemize}
-\end{itemize}
+      k(t)
+       |
+     1 |---------\____
+       |          \   \__ collapse
+       +---------------------------→  t
+\end{verbatim}
 
-\textbf{Intended use.}  
-This diagram supports the formal definition of admissible states and
-their boundary and provides a geometric intuition for structural
-tension and threshold conditions.
+\bigskip
 
-\subsection{Figure 5: Cycle Structure \texorpdfstring{\(C_n\)}{Cn}}
-\label{subsec:appendix-figures-cycle}
+% -------------------------------------------------------------
+\subsection*{G.6 Spike Cycle (K4 → K5 Transition)}
+\label{fig:spike_cycle}
 
-\textbf{Concept.}  
-The fifth figure visualises a generic cycle \(C_n\) in state space
-with period \(\tau_n\).
+\begin{verbatim}
+ Membrane potential V(t):
 
-\textbf{Structure.}
-\begin{itemize}
-  \item A closed curve (for example an elongated loop) indicating the
-        trajectory of the system in state space.
-  \item An arrow along the loop indicating direction of time.
-  \item A label \(\tau_n\) indicating the period of the cycle.
-\end{itemize}
+      +------------------ spike ------------------+
+      |                                           |
+ -70mV|___ depol ____/ \____ repol ____ undershoot |
+      |                                           |
+      +-------------------------------------------+
+             threshold Theta_exc crossed
+\end{verbatim}
 
-\textbf{Intended use.}  
-The figure underlines the role of cycles as fundamental carriers of
-time and stability on all levels of the Continuum Framework.
+\bigskip
 
-\section*{Summary}
-\label{sec:appendix-figures-summary}
+% -------------------------------------------------------------
+\subsection*{G.7 Institutional Cycle (K7)}
+\label{fig:institution_cycle}
 
-This appendix defines the conceptual content of five core figures:
+\begin{verbatim}
+     +-------------+
+     | Norms       |
+     +------^------+
+            |
+     +------v------+
+     | Roles       |
+     +------^------+
+            |
+     +------v------+
+     | Expectations|
+     +------^------+
+            |
+     +------v------+
+     | Sanctions   |
+     +-------------+
+\end{verbatim}
 
-\begin{itemize}
-  \item the universal architecture of a continuum,
-  \item the transition operator \(\Psi_{x \rightarrow x+1}\),
-  \item the full hierarchy \(K_0\)–\(K_{12}\),
-  \item the admissibility boundary \(\partial\Omega\),
-  \item and a generic cycle \(C_n\) with period \(\tau_n\).
-\end{itemize}
+\bigskip
 
-For automated builds and textual review, these descriptions are
-sufficient. High-resolution diagrams (for example in TikZ or vector
-graphics) can be added to the publication package at a later stage
-without changing the logical structure of the document.
+% -------------------------------------------------------------
+\subsection*{G.8 Civilizational Tension Landscape (K8)}
+\label{fig:civ_tension}
+
+\begin{verbatim}
+    Tension T8
+       ^
+       |             /\   unstable
+       |            /  \
+       |   stable  /    \   stable
+       |__________/      \__________
+               infrastructure magnitude →
+\end{verbatim}
+
+\bigskip
+
+% -------------------------------------------------------------
+\subsection*{G.9 K3–K4 Closure Diagram (Birth of Membrane)}
+\label{fig:k3k4_closure}
+
+\begin{verbatim}
+   +------------------------+      +----------------------------+
+   |   RAF Network (K3)     | ---> |  Bounded Compartment (K4)  |
+   +------------------------+      +----------------------------+
+          reactions                      membrane
+          autocatalysis                  transport rules
+          cycles                         gradients
+                                          thresholds
+\end{verbatim}
+
+\bigskip
