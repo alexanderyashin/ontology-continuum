@@ -1,1 +1,416 @@
-% appendix_levels placeholder
+% appendix_levels.tex
+% Core v2.5 — Appendix E: Level Definitions K0–K12
+
+\section{Appendix E: Level Definitions \texorpdfstring{$K_0$--$K_{12}$}{K0--K12}}
+\label{sec:appendix-levels}
+
+This appendix collects the compact formal definitions of all continua
+\(
+  K_0, K_1, \dots, K_{12}
+\)
+as instances of the universal template
+\[
+  K = \bigl( \Omega, A, P, \Theta, J, C, k \bigr)
+\]
+with an associated state space \(S(K)\).
+Each level \(K_x\) is specified by its state space, axes, potentials,
+thresholds, flows, cycles and the corresponding continuumness.
+
+For brevity we write \(\Omega_x = \Omega(K_x)\), \(A_x = A(K_x)\),
+\(P_x = P(K_x)\), \(\Theta_x = \Theta(K_x)\), \(J_x = J(K_x)\),
+\(C_x = C(K_x)\), and \(k_x = k(K_x)\).
+
+\subsection{\texorpdfstring{$K_0$}{K0}: Metalogical Layer}
+\label{subsec:appendix-levels-k0}
+
+\paragraph{State space.}
+An abstract metalogical domain
+\[
+  S(K_0) = \mathcal{P} \times \mathcal{L},
+\]
+where \(\mathcal{P}\) is the space of conditions of possibility and
+\(\mathcal{L}\) the space of metalaws.
+
+\paragraph{Axes.}
+No internal axes in the usual sense:
+\[
+  A_0 = \varnothing.
+\]
+Differences are defined meta-level as logical distinctions inside
+\(\mathcal{P}\) and \(\mathcal{L}\).
+
+\paragraph{Potentials and thresholds.}
+Potentials encode logical consistency, thresholds represent
+consistency bounds (e.g.\ non-contradiction).
+
+\paragraph{Flows and cycles.}
+Flows are inference operations; cycles are consistency-preserving
+reasoning loops. Continuumness is trivial:
+\[
+  k_0 =
+    \begin{cases}
+      1, & \text{if } \Omega_0 \neq \varnothing,\\
+      0, & \text{otherwise.}
+    \end{cases}
+\]
+
+\subsection{\texorpdfstring{$K_1$}{K1}: Lattice Continuum}
+\label{subsec:appendix-levels-k1}
+
+\paragraph{State space.}
+Let \(X\) be a finite lattice (graph) with sites \(i\).
+States are assignments of local variables:
+\[
+  S(K_1) = \{\, s : X \to V \,\},
+\]
+where \(V\) is a finite set (e.g.\ occupancy or spin values).
+
+\paragraph{Axes.}
+A single axis \(A_1\) describing local state (e.g.\ occupied/vacant
+or spin up/down).
+
+\paragraph{Potentials.}
+Energy functional \(E(s)\), local fields, coupling strengths.
+
+\paragraph{Thresholds.}
+Connectivity threshold \(\Theta_1\) determining the formation of a
+macroscopic cluster.
+
+\paragraph{Flows and cycles.}
+Neighbour interactions define flows; a trivial cycle guarantees
+time consistency. Continuumness:
+\[
+  k_1(p) = \frac{\lvert C_{\max}(p) \rvert}{\lvert X \rvert},
+\]
+where \(C_{\max}(p)\) is the largest connected cluster at occupancy \(p\).
+
+\subsection{\texorpdfstring{$K_2$}{K2}: Percolation Continuum}
+\label{subsec:appendix-levels-k2}
+
+\paragraph{State space.}
+Infinite lattice or thermodynamic limit of \(K_1\):
+\[
+  S(K_2) = \lim_{\lvert X \rvert\to\infty} S(K_1).
+\]
+
+\paragraph{Axes.}
+Occupancy axis \(A_1\) and cluster-connectivity axis \(A_2\)
+(e.g.\ finite vs.\ infinite cluster membership).
+
+\paragraph{Potentials.}
+Bond/site probabilities; correlation-related quantities.
+
+\paragraph{Thresholds.}
+Percolation threshold
+\(
+  \Theta_2 = p_c
+\),
+critical value separating non-percolating and percolating phases.
+
+\paragraph{Flows and cycles.}
+Cluster growth/merger as flows.
+Minimal cycle period \(\tau(K_2)\) related to correlation time.
+Continuumness:
+\[
+  k_2(p) = P_{\infty}(p),
+\]
+probability that a randomly chosen site is in the infinite cluster.
+
+\subsection{\texorpdfstring{$K_3$}{K3}: Autocatalytic Reaction Networks}
+\label{subsec:appendix-levels-k3}
+
+\paragraph{State space.}
+States combine concentrations and reaction network structure:
+\[
+  S(K_3) =
+    \bigl\{ (x, G_{\mathrm{react}}) \bigr\},
+\]
+where \(x\) is a vector of concentrations and
+\(G_{\mathrm{react}}\) is a reaction graph.
+
+\paragraph{Axes.}
+Chemical composition axes, reaction-activity axes.
+
+\paragraph{Potentials.}
+Chemical potentials, free energies, activities.
+
+\paragraph{Thresholds.}
+Reaction feasibility thresholds \(\Theta_{\mathrm{react}}\)
+(e.g.\ \(\Delta G \le 0\) and rate thresholds).
+
+\paragraph{Flows and cycles.}
+Reaction fluxes as flows; RAF-cycles as cycles.
+Continuumness \(k_3\) measures the fraction of the network embedded
+in the largest self-sustaining autocatalytic set.
+
+\subsection{\texorpdfstring{$K_4$}{K4}: Protocellular Continuum}
+\label{subsec:appendix-levels-k4}
+
+\paragraph{State space.}
+Internal and external compositions plus membrane state:
+\[
+  S(K_4) =
+    \bigl\{ (x_{\mathrm{in}}, x_{\mathrm{out}}, m) \bigr\},
+\]
+where \(m\) represents membrane configuration.
+
+\paragraph{Axes.}
+Inside/outside axis, permeability axes, gradient axes
+(concentration, osmotic, electrochemical).
+
+\paragraph{Potentials.}
+Osmotic pressure, electrochemical potentials, metabolic energy.
+
+\paragraph{Thresholds.}
+Membrane stability and transport thresholds
+\(\Theta_{\mathrm{mem}}\)
+(e.g.\ maximum tension before rupture).
+
+\paragraph{Flows and cycles.}
+Transport across the membrane and internal metabolic fluxes.
+Metabolic cycles as \(C_4\).
+Continuumness \(k_4\) grows with stable gradients and persistent
+metabolic cycles.
+
+\subsection{\texorpdfstring{$K_5$}{K5}: Neuronal Continuum}
+\label{subsec:appendix-levels-k5}
+
+\paragraph{State space.}
+Membrane potentials, channel states, synaptic weights:
+\[
+  S(K_5) = \bigl\{ (V_i, s_i, w_{ij}) \bigr\}.
+\]
+
+\paragraph{Axes.}
+Excitability axis, ion-channel axes, synaptic axes.
+
+\paragraph{Potentials.}
+Electrical potentials, ion gradients, synaptic drive.
+
+\paragraph{Thresholds.}
+Spike threshold \(\Theta_{\mathrm{spike}} = V_{\mathrm{thr}}\),
+refractory thresholds, stability conditions for excitability.
+
+\paragraph{Flows and cycles.}
+Ion currents, neurotransmitter flows and network activity.
+Cycles \(C_5\) are spike cycles and rhythmic network patterns.
+Continuumness \(k_5\) combines the fraction of neurons participating in
+cycles and their effectiveness.
+
+\subsection{\texorpdfstring{$K_6$}{K6}: Cognitive Continuum}
+\label{subsec:appendix-levels-k6}
+
+\paragraph{State space.}
+Set of internal models and belief states:
+\[
+  S(K_6) = \mathcal{M} \times \mathcal{B},
+\]
+where \(\mathcal{M}\) is the model set and \(\mathcal{B}\) encodes
+belief weights or probability distributions.
+
+\paragraph{Axes.}
+Model axes \(A^{(6)}_k\), discrepancy axes for prediction error,
+valuation and salience axes.
+
+\paragraph{Potentials.}
+Prediction-error potentials, value/valence potentials, salience
+potentials.
+
+\paragraph{Thresholds.}
+Cognitive thresholds \(\Theta_{\mathrm{cog}}\),
+in particular prediction-error thresholds \(\Theta_{\mathrm{PE}}\)
+at which models must change.
+
+\paragraph{Flows and cycles.}
+Information flows, belief updates, model-selection dynamics.
+Cycles \(C_6\) are attractor cycles in model space.
+Continuumness:
+\[
+  k_6 =
+    H(\Omega_6)\,
+    \frac{\lvert C^{(6)}_{\max} \rvert}{\lvert \mathcal{M} \rvert}\,
+    \frac{r}{r_{\max}}\,
+    \biggl( 1 - \frac{D}{\Theta_{\mathrm{cog,max}}} \biggr)_{+},
+\]
+where \(r\) is the rank (number) of active axes and
+\(D\) is a global discrepancy.
+
+\subsection{\texorpdfstring{$K_7$}{K7}: Social Systems}
+\label{subsec:appendix-levels-k7}
+
+\paragraph{State space.}
+Agents, roles and communication structures:
+\[
+  S(K_7) =
+    \bigl\{ (A_{\mathrm{agents}},
+            R_{\mathrm{roles}},
+            G_{\mathrm{comm}}) \bigr\}.
+\]
+
+\paragraph{Axes.}
+Social-difference axes, role axes, normative axes.
+
+\paragraph{Potentials.}
+Cooperation potentials, trust/conflict potentials, legitimacy.
+
+\paragraph{Thresholds.}
+Cooperation threshold \(\Theta_{\mathrm{coop}}\),
+norm-violation thresholds, stability thresholds for institutions.
+
+\paragraph{Flows and cycles.}
+Communication flows \(J_{\mathrm{comm}}\),
+resource and influence flows.
+Institutional cycles \(C_{\mathrm{inst}}\) as \(C_7\).
+Continuumness \(k_7\) measures communication coherence and
+institutional persistence.
+
+\subsection{\texorpdfstring{$K_8$}{K8}: Civilizational Systems}
+\label{subsec:appendix-levels-k8}
+
+\paragraph{State space.}
+Technologies, infrastructures, institutions, symbolic systems:
+\[
+  S(K_8) =
+    \bigl\{ (T_{\mathrm{tech}}, I_{\mathrm{inst}},
+            F_{\mathrm{infra}}, S_{\mathrm{sym}}) \bigr\}.
+\]
+
+\paragraph{Axes.}
+Technological axes, economic axes, legal axes, symbolic axes.
+
+\paragraph{Potentials.}
+Stability, entropy, innovation, resource and energy potentials.
+
+\paragraph{Thresholds.}
+Civilizational stability threshold \(\Theta_{\mathrm{stab}}\),
+infrastructure capacity thresholds, critical-load thresholds.
+
+\paragraph{Flows and cycles.}
+Resource flows, information flows, institutional flows.
+Civilizational cycles \(C_{\mathrm{stab}}\) (e.g.\ long waves,
+rise-and-fall dynamics).
+Continuumness \(k_8\) encodes stability of core infrastructures
+and persistence of stabilising cycles.
+
+\subsection{\texorpdfstring{$K_9$}{K9}: Metatheoretical Continuum}
+\label{subsec:appendix-levels-k9}
+
+\paragraph{State space.}
+Theories, paradigms, logics and models:
+\[
+  S(K_9) = \mathcal{T} \times \mathcal{L}_{\mathrm{logic}},
+\]
+with \(\mathcal{T}\) the set of theoretical systems.
+
+\paragraph{Axes.}
+Logical, ontological, methodological, interpretational axes.
+
+\paragraph{Potentials.}
+Explanatory power, coherence, parsimony, empirical adequacy.
+
+\paragraph{Thresholds.}
+Logical-contradiction thresholds, empirical thresholds,
+heuristic-value thresholds.
+
+\paragraph{Flows and cycles.}
+Arguments, proofs, reinterpretations and paradigm shifts.
+Cycles \(C_9\) are scientific cycles (normal science and revolutions).
+Continuumness \(k_9\) increases with coherence and empirical support.
+
+\subsection{\texorpdfstring{$K_{10}$}{K10}: Metamodel Continuum}
+\label{subsec:appendix-levels-k10}
+
+\paragraph{State space.}
+Categories of models and functors:
+\[
+  S(K_{10}) = \mathsf{Cat}_{\mathrm{models}},
+\]
+the category (or higher structure) whose objects are model categories
+and whose morphisms are functors.
+
+\paragraph{Axes.}
+Functorial axes, structural axes, abstraction level axes.
+
+\paragraph{Potentials.}
+Coherence, compositionality and interpretability of metamodels.
+
+\paragraph{Thresholds.}
+Coherence thresholds (compatibility of functors and compositions).
+
+\paragraph{Flows and cycles.}
+Functorial flows, adjunctions and equivalences.
+Cycles \(C_{10}\) are closed functorial chains.
+Continuumness \(k_{10}\) measures categorical coherence.
+
+\subsection{\texorpdfstring{$K_{11}$}{K11}: Meta-Semantic Continuum}
+\label{subsec:appendix-levels-k11}
+
+\paragraph{State space.}
+Semantic spaces of metamodels:
+\[
+  S(K_{11}) = \mathcal{S}_{\mathrm{meta}},
+\]
+encoding meaning assignments to model structures.
+
+\paragraph{Axes.}
+Semantic axes, interpretational axes, reference axes.
+
+\paragraph{Potentials.}
+Semantic coherence, expressivity, stability of meaning.
+
+\paragraph{Thresholds.}
+Semantic stability thresholds \(\Theta_{\mathrm{sem}}\),
+ambiguity and inconsistency thresholds.
+
+\paragraph{Flows and cycles.}
+Interpretation flows, translation between representations.
+Cycles \(C_{11}\) are meta-semantic stabilisation loops.
+Continuumness \(k_{11}\) grows with semantic coherence and
+resistance to drift.
+
+\subsection{\texorpdfstring{$K_{12}$}{K12}: Meta-Integrative Continuum}
+\label{subsec:appendix-levels-k12}
+
+\paragraph{State space.}
+Integration space of all semantic and metatheoretical levels:
+\[
+  S(K_{12}) = \mathcal{I}_{\mathrm{global}},
+\]
+collecting integrative structures over \(K_0,\dots,K_{11}\).
+
+\paragraph{Axes.}
+Integrative axes across metatheories, cross-level mapping axes.
+
+\paragraph{Potentials.}
+Global coherence, integrability, cross-domain consistency.
+
+\paragraph{Thresholds.}
+Global integrability thresholds (limits beyond which
+no consistent integration is possible).
+
+\paragraph{Flows and cycles.}
+Cross-level integrative flows, reflexive feedback loops
+between lower and meta-levels.
+Cycles \(C_{12}\) are global integrative cycles.
+Continuumness \(k_{12}\) captures the degree of global structural
+consistency across the entire hierarchy.
+
+\subsection{Compact Summary}
+\label{subsec:appendix-levels-summary}
+
+Each level \(K_x\) is a concrete instantiation of
+\(
+  (\Omega, A, P, \Theta, J, C, k)
+\)
+on a specific state space \(S(K_x)\), obeying:
+
+\begin{itemize}
+  \item existence iff \(\Omega_x \neq \varnothing\) and \(C_x \neq \varnothing\),
+  \item monotonic dimension growth while \(k_x > 0\),
+  \item compatibility with metaspace:
+        \(\Omega_x \subseteq \Omega(M_x)\),
+  \item collapse iff \(\Omega_x = \varnothing\) or \(C_x = \varnothing\).
+\end{itemize}
+
+This appendix provides the cross-level reference that links the compact core,
+the hierarchy and the continuity conditions into a single coherent structure.
