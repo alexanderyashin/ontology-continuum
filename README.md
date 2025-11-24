@@ -1,0 +1,3 @@
+This repository contains the full LaTeX source of The Ontology of Continua, a unified axiomatic theory describing how structured systems emerge, stabilize, gain new dimensions, and collapse across all major scientific domains.
+The framework defines continua via axes of distinction, potentials, thresholds, fluxes, cycles, admissible domains, boundary geometry, structural tension, and a universal dynamical operator acting within a metaspace hierarchy.
+The theory includes a 12-level ontology (K₀–K₁₂), covering physics → chemistry → biology → cognition → social systems → civilisations → metatheories, with strict continuity theorems and falsifiable predictions.
