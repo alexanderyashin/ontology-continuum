@@ -4,197 +4,220 @@
 \section{Appendix F: Dynamics and Evolution Equations}
 \label{sec:appendix-dynamics}
 
-This appendix gives the full formalisation of dynamical equations,
-operators, and structural constraints that govern the evolution of all
-continua \(K_0,\dots,K_{12}\).
-Every continuum evolves according to the universal operator
+This appendix provides the complete formal structure of dynamical evolution for
+all continua \(K_0,\dots,K_{12}\). The evolution of a continuum is defined by a
+universal operator
 \[
   E : K(t) \longrightarrow K(t+\Delta t),
 \]
-with component-wise update laws. These laws are specified below.
+which decomposes into component-wise laws acting on the tuple
+\(
+  (\Omega, A, P, \Theta, J, C, k, T).
+\)
 
 \subsection{Universal Evolution Scheme}
 \label{subsec:appendix-dynamics-universal}
 
-For any continuum \(K\), let the components be
-\(
-  (\Omega, A, P, \Theta, J, C, k)
-\).
-Their time evolution is defined by:
+The fundamental dynamical system is:
 \begin{align*}
   \frac{dA}{dt} &= F(A,P,\Theta,J,C,t), \\
   \frac{dP}{dt} &= G(A,P,\Theta,J,C,t), \\
   \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t), \\
-  \frac{dJ}{dt} &= Q(A,P,\Theta,J,C,t), \\
-  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t), \\
-  \frac{dk}{dt} &= U(A,P,\Theta,J,C,k,t).
+  \frac{dT}{dt} &= Q(A,P,\Theta,J,C,T,t), \\
+  \frac{dJ}{dt} &= S(A,P,\Theta,J,C,t), \\
+  \frac{dC}{dt} &= R(A,P,\Theta,J,C,T,t), \\
+  \frac{dk}{dt} &= U(A,P,\Theta,J,C,T,k,t).
 \end{align*}
 
-The operators \(F,G,H,Q,S,U\) depend on the level \(K_x\), its metaspace
-\(M_{x+1}\), and the local admissibility conditions \(\Omega_x\).
+The operators depend on the current level \(K_x\), its metaspace \(M_{x+1}\),
+and the admissibility region \(\Omega_x\).  
+All components are coupled through tension and thresholds.
 
 \subsection{Constraints for Dynamics}
 \label{subsec:appendix-dynamics-constraints}
 
-Each operator must satisfy:
+Each operator satisfies the following structural constraints:
 
-\paragraph{(Dyn1) Admissibility Preservation.}
-If \(A(t)\in \mathcal{A}_{A_j}\), then
+\paragraph{(Dyn1) Admissibility preservation.}
 \[
-  A(t+\Delta t) \in \mathcal{A}_{A_j}.
+  T(s(t))\le 0 \;\Rightarrow\; s(t+\Delta t)\in\Omega(K).
 \]
 
-\paragraph{(Dyn2) Threshold Compliance.}
-The dynamics may approach \(\partial\Omega\), but cannot move past it
-while \(k>0\):
+\paragraph{(Dyn2) Boundary saturation constraint.}
+States may approach but not cross the admissibility boundary while \(k>0\):
 \[
-  T(t) \le 0 \Rightarrow T(t+\Delta t) \le 0.
+  T(t)=0 \Rightarrow T(t+\Delta t)\le 0.
 \]
 
-\paragraph{(Dyn3) Monotonic Dimension Constraint.}
-New axes may appear only if
+\paragraph{(Dyn3) Dimension monotonicity.}
+A new axis may appear only if
 \[
   T \ge \Theta_{\mathrm{dim}},
 \]
-and may never disappear unless \(k=0\).
+and existing axes cannot disappear unless \(k=0\).
 
-\paragraph{(Dyn4) Cycle Preservation.}
-Cycles must either persist or transform continuously into new cycles.
+\paragraph{(Dyn4) Cycle continuity.}
+Existing cycles deform continuously or merge into new ones;  
+abrupt loss of cycles implies collapse.
 
-\paragraph{(Dyn5) Metaspace Compatibility.}
+\paragraph{(Dyn5) Metaspace compatibility.}
 \[
-  \Omega(K_x(t)) \subseteq \Omega(M_x)
-  \quad\text{for all } t.
+  \Omega(K_x(t))\subseteq\Omega(M_x)
+  \quad\forall t.
 \]
 
 \subsection{Operator \(F\): Axis Dynamics}
 \label{subsec:appendix-dynamics-F}
 
-Axis evolution governs changes in the coordinates that define distinctions:
+Axis evolution is defined by:
 \[
   \frac{dA_j}{dt} = F_j(A,P,\Theta,J,C,t).
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_2\): change in cluster-connectivity class.
-  \item \(K_4\): time evolution of membrane permeability axis.
-  \item \(K_6\): activation/deactivation of cognitive axes.
-  \item \(K_7\): emergence or disappearance of social norms/roles.
-  \item \(K_8\): emergence of new technological or institutional axes.
+  \item \(K_2\): topological class of cluster connectivity.
+  \item \(K_4\): membrane curvature/permeability axes.
+  \item \(K_6\): activation of cognitive axes (binding, prediction).
+  \item \(K_7\): emergence or decay of social norm axes.
+  \item \(K_8\): technological/institutional axes.
 \end{itemize}
 
 \subsection{Operator \(G\): Potential Dynamics}
 \label{subsec:appendix-dynamics-G}
 
-Potentials evolve by:
+Potentials evolve via:
 \[
   \frac{dP_i}{dt} = G_i(A,P,\Theta,J,C,t).
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_3\): change in chemical potentials due to fluxes.
-  \item \(K_5\): change in membrane potentials due to ion currents.
+  \item \(K_3\): chemical potentials driven by reaction fluxes.
+  \item \(K_5\): voltage and ionic gradients.
   \item \(K_6\): prediction-error dynamics.
-  \item \(K_7\): trust/conflict potentials in social networks.
+  \item \(K_7\): conflict/trust potentials.
+  \item \(K_8\): systemic energy/information potentials.
 \end{itemize}
 
 \subsection{Operator \(H\): Threshold Dynamics}
 \label{subsec:appendix-dynamics-H}
 
-Thresholds evolve slowly:
+Slow adaptation of thresholds:
 \[
   \frac{d\Theta_\ell}{dt} = H_\ell(A,P,\Theta,J,C,t).
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_4\): mechanical limits of membranes adjusting to stress.
-  \item \(K_6\): adjustment of prediction-error tolerance.
-  \item \(K_7\): change in institutional stability thresholds.
-  \item \(K_8\): systemic thresholds tied to infrastructure capacity.
+  \item \(K_4\): mechanical/energetic membrane constraints.
+  \item \(K_6\): predictive tolerance thresholds.
+  \item \(K_7\): institutional and cultural stability limits.
+  \item \(K_8\): infrastructure load thresholds.
 \end{itemize}
 
-\subsection{Operator \(Q\): Flow Dynamics}
+\subsection{Operator \(Q\): Tension Dynamics}
 \label{subsec:appendix-dynamics-Q}
 
-Flows evolve via:
+Tension evolves through:
 \[
-  \frac{dJ_m}{dt} = Q_m(A,P,\Theta,J,C,t).
+  \frac{dT}{dt} = Q(A,P,\Theta,J,C,T,t),
+\]
+with:
+\[
+  T(s)\le 0 \;\Rightarrow\; s\in\Omega(K),\qquad
+  T(s)=0\;\Rightarrow\; s\in\partial\Omega(K).
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_3\): reaction flux modifications.
-  \item \(K_4\): osmotic/electrochemical fluxes.
-  \item \(K_5\): neuronal currents and synaptic fluxes.
-  \item \(K_7\): communication/influence flows.
-  \item \(K_8\): energy/resource flows.
+  \item \(K_3\): catalytic deficit vs. activation barrier.
+  \item \(K_4\): osmotic stress vs. membrane tension.
+  \item \(K_6\): model-inconsistency tension.
+  \item \(K_7\): institutional/coordination stress.
 \end{itemize}
 
-\subsection{Operator \(S\): Cycle Dynamics}
+\subsection{Operator \(S\): Flow Dynamics}
 \label{subsec:appendix-dynamics-S}
 
-Cycle evolution is:
+Flows evolve by:
 \[
-  \frac{dC_n}{dt} = S_n(A,P,\Theta,J,C,t).
+  \frac{dJ_m}{dt} = S_m(A,P,\Theta,J,C,t).
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_3\): metabolic closure or cycle amplification.
-  \item \(K_5\): formation/destruction of rhythmic firing patterns.
-  \item \(K_6\): restructuring of model-attractor cycles.
-  \item \(K_7\): reinforcement or collapse of institutional cycles.
-  \item \(K_8\): long-wave stabilisation or destabilisation.
+  \item \(K_3\): reaction flux modulation.
+  \item \(K_4\): ion/osmotic fluxes.
+  \item \(K_5\): synaptic/neuronal currents.
+  \item \(K_7\): communication or influence flows.
+\end{itemize}
+
+\subsection{Operator \(R\): Cycle Dynamics}
+\label{subsec:appendix-dynamics-R}
+
+Cycles obey:
+\[
+  \frac{dC_n}{dt} = R_n(A,P,\Theta,J,C,T,t).
+\]
+
+Examples:
+\begin{itemize}
+  \item \(K_3\): metabolic closure maintenance.
+  \item \(K_5\): rhythmic/pattern-forming cycles.
+  \item \(K_6\): attractor restructuring.
+  \item \(K_7\): institutional reinforcement loops.
 \end{itemize}
 
 \subsection{Operator \(U\): Continuumness Dynamics}
 \label{subsec:appendix-dynamics-U}
 
-Continuumness evolves under:
+Continuumness evolves as:
 \[
-  \frac{dk}{dt} = U(A,P,\Theta,J,C,k,t),
+  \frac{dk}{dt} = U(A,P,\Theta,J,C,T,k,t).
 \]
-with:
+
+With:
 \[
-  U > 0 \quad\text{if stability improves},\qquad
-  U < 0 \quad\text{if thresholds are approached}.
+  U>0 \;\text{when resilience increases},\qquad
+  U<0 \;\text{approaching thresholds}.
 \]
 
 Examples:
 \begin{itemize}
-  \item \(K_2\): increase of infinite-cluster probability.
-  \item \(K_4\): stabilisation of membrane and metabolic loops.
-  \item \(K_6\): increased coherence of cognitive models.
-  \item \(K_7\): social cohesion gain.
-  \item \(K_8\): infrastructural stabilisation.
+  \item \(K_2\): likelihood of infinite-cluster formation.
+  \item \(K_4\): stability of membrane + metabolic subsystems.
+  \item \(K_6\): coherence of cognitive models.
+  \item \(K_7\): social cohesion dynamics.
 \end{itemize}
 
 \subsection{Parameter Dynamics}
 \label{subsec:appendix-dynamics-params}
 
-Parameters obey:
+General parameter evolution:
 \[
-  \frac{d\Pi}{dt} = W(A,P,\Theta,J,C,k,\Pi,t).
+  \frac{d\Pi}{dt} = W(A,P,\Theta,J,C,T,k,\Pi,t).
 \]
 
-This captures learning (K6), evolution (K4–K5), institutional drift (K7),
-technological change (K8), and semantic drift (K11).
+This captures learning (K6), genetic drift (K4–K5), institutional drift (K7),
+technological change (K8) and model drift (K11).
 
 \subsection{Dynamical Stability}
 \label{subsec:appendix-dynamics-stability}
 
-A continuum is dynamically stable if:
+Define the landscape:
 \[
-  \frac{dL}{dt} \le 0,
+  L(s)=T(s)-\Theta(s).
 \]
-where \(L(s) = T(s) - \Theta(s)\) is the landscape function.
+
+Stability requires:
+\[
+  \frac{dL}{dt}\le 0.
+\]
 
 Equivalently:
 \[
-  T(t) \le \Theta(t) \quad\forall t.
+  T(t)\le\Theta(t)\quad\forall t.
 \]
 
 \subsection{Cycle Formation and Destruction}
@@ -202,20 +225,19 @@ Equivalently:
 
 Cycles form when:
 \[
-  S_n > 0,\quad
-  C_n(t) \neq \varnothing.
+  R_n>0 \quad\text{and}\quad C_n(t)\neq\varnothing.
 \]
 
-Cycles break when:
+Cycles collapse when:
 \[
-  C_n = \varnothing
-  \quad\Longleftrightarrow\quad
-  T > \Theta_{\mathrm{cycle}}.
+  C_n=\varnothing
+  \;\Longleftrightarrow\;
+  T>\Theta_{\mathrm{cycle}}.
 \]
 
-Loss of all cycles implies death:
+Loss of all cycles implies:
 \[
-  C=\varnothing \quad\Rightarrow\quad k=0.
+  C=\varnothing \Rightarrow k=0.
 \]
 
 \subsection{Dimension Change under Dynamics}
@@ -223,51 +245,46 @@ Loss of all cycles implies death:
 
 Dimension increases when:
 \[
-  T \ge \Theta_{\mathrm{dim}}.
+  T\ge\Theta_{\mathrm{dim}}.
 \]
-
 Dimension cannot decrease unless \(k=0\).
 
-\subsection{Continuity of Time}
+\subsection{Time Continuity}
 \label{subsec:appendix-dynamics-time}
 
-The time scale
+The characteristic time scale satisfies:
 \[
-  \tau(K) = \min_n \tau_n
+  \tau(K)=\min_n \tau_n.
 \]
-evolves continuously except at collapse.
 
-Near critical thresholds,
+Critical slowing down:
 \[
-  \tau \to +\infty
-  \quad\Rightarrow\quad
-  k \to 0.
+  \tau\to+\infty \;\Rightarrow\; k\to 0.
 \]
 
 \subsection{Metaspace Constraints}
 \label{subsec:appendix-dynamics-meta}
 
-Dynamics must honour:
+Dynamics respect:
 \[
-  \Omega(K_x) \subseteq \Omega(M_x),\qquad
-  A(K_x) \subseteq A(M_x),
+  \Omega(K_x)\subseteq\Omega(M_x),\qquad
+  A(K_x)\subseteq A(M_x).
 \]
-ensuring cross-level compatibility.
 
 \subsection{Compact Summary}
 \label{subsec:appendix-dynamics-summary}
 
-This appendix formalises all dynamical components:
+This appendix formalises:
 
 \begin{itemize}
-  \item universal evolution operator \(E\),
-  \item component dynamics \(F,G,H,Q,S,U\),
-  \item parameter dynamics \(W\),
-  \item constraints from threshold landscapes and metaspace,
-  \item cycle evolution and dimension growth,
-  \item universal stability and collapse conditions.
+  \item the universal dynamic operator \(E\),
+  \item component laws \(F,G,H,Q,S,R,U\),
+  \item parameter evolution \(W\),
+  \item tension-driven constraints,
+  \item metaspace compatibility,
+  \item cycle dynamics and collapse rules,
+  \item dimension growth and time continuity.
 \end{itemize}
 
-These equations unify the dynamics of all levels
-\(K_0\) through \(K_{12}\)
-under a single coherent structure.
+Together, these equations unify the dynamics of all continua
+\(K_0\) through \(K_{12}\) under a single coherent formal system.
