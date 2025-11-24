@@ -1,1 +1,183 @@
-% appendix_core placeholder
+% appendix_core.tex
+% Core v2.5 — Appendix A: Core Mathematical Definitions
+
+\section{Appendix A: Core Mathematical Definitions}
+\label{sec:appendix-core}
+
+This appendix provides the formal mathematical definitions underlying the
+Continuum Framework. It expands the compact core specification
+\[
+  K = (\Omega, A, P, \Theta, J, C, k)
+\]
+into explicit structures suitable for mathematical analysis.
+
+\subsection{State Space}
+\label{subsec:appendix-core-state}
+
+Each continuum \(K\) possesses a state space
+\[
+  S(K),
+\]
+which may be discrete, continuous, mixed, or categorical.
+The admissible region is a subset \(\Omega(K)\subseteq S(K)\).
+
+\subsection{Axes of Difference}
+\label{subsec:appendix-core-axes}
+
+Axes are measurable or distinguishable coordinates:
+\[
+  A_j : S(K) \to \mathcal{A}_{A_j}.
+\]
+The set of all axes is:
+\[
+  A(K) = \{ A_j \}_{j \in J_A}.
+\]
+
+\subsection{Potentials}
+\label{subsec:appendix-core-potentials}
+
+Potentials quantify forces or constraints:
+\[
+  P_i : S(K) \to \mathcal{D}_{P_i}.
+\]
+
+\subsection{Thresholds}
+\label{subsec:appendix-core-thresholds}
+
+Thresholds define admissibility boundaries:
+\[
+  \Theta_\ell : S(K) \to \mathbb{R}.
+\]
+All thresholds form a vector:
+\[
+  \vec{\Theta} = (\Theta_\ell)_{\ell\in J_\Theta}.
+\]
+
+\subsection{Flows}
+\label{subsec:appendix-core-flows}
+
+Flows describe transport or influence:
+\[
+  J_m : S(K)\times\mathbb{R} \to \mathcal{F}_m.
+\]
+Set of flows:
+\[
+  J(K) = \{J_m\}_{m\in J_J}.
+\]
+
+\subsection{Cycles}
+\label{subsec:appendix-core-cycles}
+
+Cycles are closed trajectories:
+\[
+  C_n : [0,\tau_n] \to S(K),
+  \qquad C_n(0)=C_n(\tau_n).
+\]
+
+\subsection{Continuumness}
+\label{subsec:appendix-core-k}
+
+Continuumness is:
+\[
+  k : \Omega(K)\to[0,1].
+\]
+
+\subsection{Structural Tension}
+\label{subsec:appendix-core-tension}
+
+Structural tension is a scalar or vector field:
+\[
+  T : S(K)\to\mathbb{R},
+\]
+with sign indicating whether thresholds are satisfied:
+\[
+  T(s)\le0 \Rightarrow s\in\Omega(K), \qquad
+  T(s)=0 \Rightarrow s\in\partial\Omega(K).
+\]
+
+\subsection{Boundary of Admissibility}
+\label{subsec:appendix-core-boundary}
+
+\[
+  \partial\Omega(K) =
+  \bigl\{ s \in S(K) \ \big|\ 
+    T(s)=0 \lor 
+    P_i(s)\in\partial\mathcal{D}_{P_i} \lor
+    A_j(s)\in\partial\mathcal{A}_{A_j}
+  \bigr\}.
+\]
+
+\subsection{Evolution Operator}
+\label{subsec:appendix-core-evolution}
+
+Dynamics are governed by:
+\[
+  E : K(t)\mapsto K(t+\Delta t),
+\]
+with component-wise updates:
+\begin{align*}
+  \frac{dA}{dt} &= F(A,P,\Theta,J,C,t), \\
+  \frac{dP}{dt} &= G(A,P,\Theta,J,C,t), \\
+  \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t), \\
+  \frac{dJ}{dt} &= Q(A,P,\Theta,J,C,t), \\
+  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t), \\
+  \frac{dk}{dt} &= U(A,P,\Theta,J,C,k,t).
+\end{align*}
+
+\subsection{Time Scale}
+\label{subsec:appendix-core-time}
+
+If cycles exist:
+\[
+  \tau(K)=\min_n \tau_n.
+\]
+Otherwise:
+\[
+  \tau(K)=+\infty, \qquad k=0.
+\]
+
+\subsection{Dimension}
+\label{subsec:appendix-core-dimension}
+
+Dimension is defined via the number of independent axes:
+\[
+  \dim K = |A(K)|.
+\]
+
+\subsection{Dimension Growth}
+\label{subsec:appendix-core-dim-growth}
+
+A new dimension emerges when:
+\[
+  T\ge \Theta_{\mathrm{dim}}
+  \quad\text{and}\quad
+  \Omega(K_x)\subseteq\Omega(M_{x+1}).
+\]
+
+\subsection{Collapse Conditions}
+\label{subsec:appendix-core-collapse}
+
+Collapse occurs if:
+\[
+  \Omega=\varnothing
+  \quad\text{or}\quad
+  C=\varnothing.
+\]
+
+\subsection{Compatibility with Metaspace}
+\label{subsec:appendix-core-compatibility}
+
+For existence:
+\[
+  \Omega(K_x)\subseteq\Omega(M_x).
+\]
+
+\subsection{Compact Summary}
+\label{subsec:appendix-core-summary}
+
+This appendix formalises all core components:
+\[
+  S,\Omega,A,P,\Theta,J,C,k,T,\partial\Omega,E,\tau,\dim.
+\]
+These definitions provide the mathematical foundation of every level
+\(K_0\) through \(K_{12}\).
