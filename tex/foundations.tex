@@ -1,1 +1,258 @@
-% foundations placeholder
+% foundations.tex
+% Core v2.5 — Formal Foundations of the Continuum Framework
+
+\section{Foundations of the Continuum Framework}
+\label{sec:foundations}
+
+This section introduces the formal foundations of the Continuum Framework.
+We fix the basic notation, define continua as structured dynamical systems,
+specify the admissible state set \(\Omega(K)\) and its boundary
+\(\partial\Omega(K)\), and state the core axioms and meta-theorems
+governing all levels \(K_0,\dots,K_{12}\).
+
+\subsection{Notation and Basic Objects}
+\label{subsec:foundations-notation}
+
+Throughout this work we use the following conventions.
+
+\begin{itemize}
+  \item A \emph{continuum} is denoted by \(K\) with an optional level index,
+        e.g.\ \(K_x\) for \(x=0,\dots,12\).
+  \item The \emph{state space} of \(K\) is a set \(S(K)\).
+        The subset of admissible states is denoted by \(\Omega(K) \subseteq S(K)\).
+  \item The \emph{axes of difference} of \(K\) form a set
+        \(A(K) = \{A_j\}_{j \in J_A}\).
+  \item The \emph{potentials} of \(K\) form a set
+        \(P(K) = \{P_i\}_{i \in J_P}\).
+  \item The \emph{thresholds} of \(K\) form a set
+        \(\Theta(K) = \{\Theta_\ell\}_{\ell \in J_\Theta}\).
+  \item The \emph{flows} of \(K\) form a set
+        \(J(K) = \{J_m\}_{m \in J_J}\).
+  \item The \emph{cycles} of \(K\) form a set
+        \(C(K) = \{C_n\}_{n \in J_C}\).
+  \item The \emph{continuumness} (or \emph{degree of connectivity})
+        is a function
+        \[
+          k(K) : \Omega(K) \to [0,1].
+        \]
+\end{itemize}
+
+Whenever the meaning is clear, we omit the explicit dependence on \(K\)
+and write \(\Omega, A, P, \Theta, J, C, k\).
+
+\subsection{Continuum as a Structured System}
+\label{subsec:foundations-continuum}
+
+\begin{definition}[Continuum]
+A \emph{continuum} is a tuple
+\[
+  K = \bigl(\Omega, A, P, \Theta, J, C, k\bigr)
+\]
+together with an ambient state space \(S(K)\) such that:
+\begin{enumerate}
+  \item \textbf{Axes of difference.}
+        Each axis \(A_j\) is a function
+        \[
+          A_j : S(K) \to \mathcal{A}_{A_j},
+        \]
+        where \(\mathcal{A}_{A_j}\) is the set of admissible values
+        of that axis.
+  \item \textbf{Potentials.}
+        Each potential \(P_i\) is a function
+        \[
+          P_i : S(K) \to \mathcal{D}_{P_i},
+        \]
+        where \(\mathcal{D}_{P_i}\) is a domain of admissible values
+        (for example intervals in \(\mathbb{R}\) or subsets of \(\mathbb{R}^n\)).
+  \item \textbf{Thresholds.}
+        Each threshold \(\Theta_\ell\) is a function (or parameter)
+        specifying a boundary between qualitatively different regimes.
+        We write collectively
+        \(\vec{\Theta} = (\Theta_\ell)_{\ell \in J_\Theta}\).
+  \item \textbf{Flows.}
+        Each flow \(J_m\) is a mapping describing a transport or
+        transformation along the axes,
+        for example
+        \[
+          J_m : S(K) \times \mathbb{R} \to \mathcal{F}_m,
+        \]
+        where \(t \in \mathbb{R}\) denotes time.
+  \item \textbf{Cycles.}
+        Each cycle \(C_n\) is a closed trajectory in state space,
+        i.e.\ a map \(\gamma_n : [0,\tau_n] \to S(K)\) such that
+        \(\gamma_n(0) = \gamma_n(\tau_n)\).
+  \item \textbf{Continuumness.}
+        The function \(k : \Omega(K) \to [0,1]\) measures the global
+        connectedness and viability of the continuum.
+\end{enumerate}
+\end{definition}
+
+Intuitively, a continuum exists whenever there is a non-empty set of
+admissible states equipped with axes, potentials, thresholds, flows, and cycles,
+such that at least one non-trivial cycle persists and \(k > 0\).
+
+\subsection{Admissible States and the Boundary \texorpdfstring{\(\partial\Omega(K)\)}{dOmega(K)}}
+\label{subsec:foundations-omega}
+
+We now give the universal definition of admissible states and their boundary.
+
+\begin{definition}[Admissible states]
+For a continuum \(K\) with state space \(S(K)\), the set of admissible states
+\(\Omega(K)\) is defined by
+\begin{align*}
+  \Omega(K) = \bigl\{\, s \in S(K) \ \big|\ &
+    P_i(s) \in \mathcal{D}_{P_i} \ \text{for all } i, \\
+  & A_j(s) \in \mathcal{A}_{A_j} \ \text{for all } j, \\
+  & C(s) \neq \varnothing, \\
+  & \vec{\Theta}(s) \geq 0, \\
+  & T(s) \leq 0 \,\bigr\},
+\end{align*}
+where:
+\begin{itemize}
+  \item \(C(s)\) denotes the set of cycles that remain viable in state \(s\);
+  \item \(\vec{\Theta}(s)\) is the vector of thresholds evaluated in state \(s\);
+  \item \(T(s)\) is the structural tension of state \(s\), defined such that
+        \(T(s) \leq 0\) means that no threshold is violated.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Boundary of admissible states]
+The boundary of the admissible state set is
+\[
+  \partial\Omega(K) =
+  \bigl\{\, s \in S(K) \ \big|\ 
+    T(s) = 0 \ \text{or} \
+    \exists i:\ P_i(s) \in \partial\mathcal{D}_{P_i}
+    \ \text{or} \
+    \exists j:\ A_j(s) \in \partial\mathcal{A}_{A_j}
+  \,\bigr\}.
+\]
+States on \(\partial\Omega(K)\) lie on the thresholds of phase transitions,
+dimension growth, or collapse of the continuum.
+\end{definition}
+
+\subsection{Time, Cycles and the Evolution Operator}
+\label{subsec:foundations-time}
+
+Time in the Continuum Framework is defined in terms of cycles.
+
+\begin{definition}[Minimal cycle period and time scale]
+Let \(C(K)\) be the set of cycles of a continuum \(K\), and let
+\(\tau_n > 0\) denote the period of a cycle \(C_n\).
+If there exists at least one non-trivial cycle, the characteristic
+time scale of \(K\) is defined as
+\[
+  \tau(K) = \min_{n} \tau_n.
+\]
+If \(C(K) = \varnothing\), we set \(\tau(K) = +\infty\); in this case
+the continuum is considered dead (\(k=0\)).
+\end{definition}
+
+\begin{definition}[Evolution operator]
+The evolution of a continuum is given by an operator
+\[
+  E : K(t) \mapsto K(t+\Delta t),
+\]
+which can be decomposed into the dynamics of the components:
+\begin{align*}
+  \frac{\mathrm{d}A}{\mathrm{d}t} &= F(A, P, \Theta, J, C, t), \\
+  \frac{\mathrm{d}P}{\mathrm{d}t} &= G(A, P, \Theta, J, C, t), \\
+  \frac{\mathrm{d}\Theta}{\mathrm{d}t} &= H(A, P, \Theta, J, C, t), \\
+  \frac{\mathrm{d}J}{\mathrm{d}t} &= Q(A, P, \Theta, J, C, t), \\
+  \frac{\mathrm{d}C}{\mathrm{d}t} &= S(A, P, \Theta, J, C, t), \\
+  \frac{\mathrm{d}k}{\mathrm{d}t} &= U(A, P, \Theta, J, C, k, t).
+\end{align*}
+Here \(F, G, H, Q, S, U\) are level-dependent operators, constrained
+by the axioms and the structure of the metaspace.
+\end{definition}
+
+\subsection{Core Axioms}
+\label{subsec:foundations-axioms}
+
+We recall three axioms that underlie all levels of the Continuum Framework.
+
+\paragraph{Axiom 0.1 (Difference and Connectivity).}
+Metapressure generates non-identity of possible states.
+Difference is the minimal form of contradiction.
+Connectivity of a continuum is a function of difference: if there are
+no differences (\(\Delta = 0\)), connectivity vanishes and
+\(k(t) = 0\).
+The basic building blocks become elements of a continuum only when
+they can be assigned distinguishable coordinates.
+A continuum exists if and only if there are at least two distinguishable
+states.
+
+\paragraph{Axiom 0.3 (Logical Supremacy of \(K_0\)).}
+The level \(K_0\) does not belong to the sets of continua, differences,
+or dimensions.
+It is given as a pair \((\mathcal{P}, \mathcal{L})\), the space of
+conditions of possibility and metalaws.
+There is a relation of logical superiority \(K_0 \succ K_i\) if and only if
+all structures of \(K_i\) (state sets \(\mathcal{C}_i\), differences
+\(\mathcal{D}_i\), and dimensions \(\mathcal{R}_i\)) are contained in
+the domain of definition of \(K_0\).
+Here ``greater'' refers to logical supremacy: \(K_0\) exceeds any \(K_i\)
+in the sense of defining the conditions of possibility of its structures,
+not in a physical or metric sense.
+
+\paragraph{Principle of Conjugate Hierarchy \(K \leftrightarrow M\).}
+Each continuum \(K_x\) generates a metaspace \(M_{x+1}\) as the space
+of admissible states induced by the structure of \(K_x\).
+Conversely, \(M_{x+1}\) defines the conditions of possibility for the
+existence of \(K_x\) and the potential emergence of \(K_{x+1}\).
+The pairs \((K_x, M_{x+1})\) form a conjugate hierarchy
+\((K_0, M_1), (K_1, M_2), \dots\), with
+\(\mathrm{DoF}(K_x) \leq \mathrm{DoF}(M_{x+1})\) and
+\(A_{K_x} \subseteq A_{M_{x+1}}\).
+
+\subsection{Global Theorems}
+\label{subsec:foundations-theorems}
+
+In this subsection we state three global theorems that apply to all levels
+of the Continuum Framework. Proofs are given in later sections for
+particular classes of continua.
+
+\paragraph{Theorem 1 (Monotonicity of Dimension).}
+Let \(K(t)\) be a continuum with \(k(t) > 0\) on a time interval
+\([t_0, t_1]\), and let \(\dim K(t)\) denote the dimension of \(K(t)\).
+Then
+\[
+  \dim K(t_1) \geq \dim K(t_0).
+\]
+In particular, while the continuum is alive (\(k>0\)), its dimension
+cannot decrease; it can either remain constant or increase.
+A decrease of dimension is possible only through the death of the
+continuum, i.e.\ \(\Omega(K) = \varnothing\) and \(k = 0\).
+
+\paragraph{Theorem 2 (Death as Loss of Cycles).}
+A continuum \(K\) ceases to exist if and only if, for all configurations
+of differences and for all possible dimensions, the structural tension
+\(T\) exceeds the corresponding threshold \(\Theta\).
+In this case there are no reachable states, \(\Omega(K) = \varnothing\),
+and the set of cycles becomes empty: \(C(K) = \varnothing\).
+Equivalently, death can be characterised by the condition
+\[
+  k(K) = 0 \quad \Longleftrightarrow \quad C(K) = \varnothing.
+\]
+
+\paragraph{Theorem 3 (Compatibility of Continuum and Metaspace).}
+For each level \(x\), the continuum \(K_x\) exists if and only if
+its admissible state set is contained in the admissible set of its
+metaspace:
+\[
+  K_x \text{ exists} \quad \Longleftrightarrow \quad
+  \Omega(K_x) \subseteq \Omega(M_x).
+\]
+In particular, violations of the constraints of \(M_x\) force \(K_x\)
+to leave its admissible region and eventually lead to \(k_x = 0\).
+This provides a general criterion of consistency between continua and
+their metaspaces.
+\medskip
+
+The definitions and principles stated in this section are the formal
+foundation of all subsequent levels \(K_0,\dots,K_{12}\).
+Each level is obtained by specifying concrete choices for the state
+space \(S(K_x)\), axes \(A(K_x)\), potentials \(P(K_x)\), thresholds
+\(\Theta(K_x)\), flows \(J(K_x)\), cycles \(C(K_x)\), and the measure
+of continuumness \(k(K_x)\), subject to the universal axioms and the
+compatibility conditions with the corresponding metaspaces.
