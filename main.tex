@@ -1,10 +1,12 @@
 \documentclass[11pt,a4paper]{article}
 
 % -------------------------------------------------
-% Packages (LuaLaTeX-compatible)
+% Packages
 % -------------------------------------------------
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
 
+\usepackage{fontspec} % Unicode support for LuaLaTeX
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{mathtools}
 \usepackage{bm}
@@ -26,7 +28,7 @@
 \usepackage{microtype}
 
 % -------------------------------------------------
-% Theorem Environments
+% Theorem environments
 % -------------------------------------------------
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -51,7 +53,7 @@
 \large A Unified Axiomatic Framework for Emergence, Persistence and Collapse}
 
 \author{Alexander Yashin}
-\date{v1.0-preprint}
+\date{v2.5-preprint}
 
 % -------------------------------------------------
 % Document
@@ -63,14 +65,13 @@
 \newpage
 
 % -------------------------------------------------
-% Core Sections (correct and updated)
+% Core Sections
 % -------------------------------------------------
 
 \input{tex/abstract}
 \input{tex/introduction}
 \input{tex/foundations}
-\input{tex/core_compact}
-\input{tex/continuity}
+\input{tex/continuity} % FIXED — formerly dynamics.tex
 \input{tex/hierarchy}
 \input{tex/falsifiability}
 \input{tex/applications}
