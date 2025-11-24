@@ -88,9 +88,8 @@ Contact
 For discussions, collaborations, or feedback:
 
 Alexander Yashin
-LinkedIn: https://linkedin.com/in/alexander-yashin
-
-GitHub: https://github.com/AlexanderYashin
+LinkedIn: [https://www.linkedin.com/in/alexander-yashin-428594154]
+GitHub: [https://github.com/alexanderyashin]
 
 Status
 
