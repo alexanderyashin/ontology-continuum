@@ -1,16 +1,52 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
-\usepackage[utf8]{inputenc}
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{bm}
 
-\title{The Ontology of Continua}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% -------------------------------------------------
+% Document Metadata
+% -------------------------------------------------
+\title{\textbf{The Ontology of Continua}\\
+\vspace{0.3em}
+\large A Unified Axiomatic Framework for Emergence, Persistence and Collapse}
 \author{Alexander Yashin}
 \date{v1.0-preprint}
 
+% -------------------------------------------------
+% Document
+% -------------------------------------------------
 \begin{document}
 
 \maketitle
+\tableofcontents
+\newpage
 
-This is a temporary placeholder for the Ontology of Continua preprint.
-The full LaTeX source will be added in later commits.
+% -------------------------------------------------
+% Core Sections (imported from /tex/)
+% -------------------------------------------------
+
+\input{tex/00-introduction}
+\input{tex/01-axioms}
+\input{tex/02-operator}
+\input{tex/03-K-hierarchy}
+\input{tex/04-continuity}
+\input{tex/05-transition-operators}
+\input{tex/06-falsifiability}
+\input{tex/07-applications}
+\input{tex/08-bibliography}
 
 \end{document}
