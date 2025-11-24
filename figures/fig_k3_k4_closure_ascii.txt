@@ -1,1 +1,20 @@
-fig_k3_k4_closure_ascii placeholder
+% -------------------------------------------------
+% Figure: K3–K4 closure  (fig_k3_k4_closure_ascii.txt)
+% -------------------------------------------------
+\begin{figure}[h!]
+  \centering
+  % ASCII diagram in figures/fig_k3_k4_closure_ascii.txt
+  \caption{Transition from autocatalytic chemistry ($K_3$) to protocellular
+  closure ($K_4$). 
+  The diagram shows an autocatalytic RAF-network embedded in an open reaction
+  medium and the appearance of a semi-permeable membrane that defines an
+  inside/outside axis. 
+  Once the membrane is present and osmotic as well as mechanical thresholds
+  are respected, a new admissible region $\Omega(K_4)$ appears, containing
+  states in which the RAF-network is confined, maintained and energetically
+  supported inside a bounded volume. 
+  This closure marks a dimensional transition: the membrane creates an
+  additional axis (inside/outside) and turns purely chemical dynamics into a
+  protocellular continuum with its own $k_4(t)$.}
+  \label{fig:k3-k4-closure}
+\end{figure}
