@@ -4,158 +4,206 @@
 \section{Falsifiability and Empirical Tests}
 \label{sec:falsifiability}
 
-This section provides the universal and level-specific criteria under which
-the Continuum Framework can be empirically or mathematically falsified.
-Falsifiability is formulated directly in terms of the core components
+Falsifiability in the Continuum Framework is expressed entirely in terms of
+the structural primitives
 \[
   (\Omega, A, P, \Theta, J, C, k).
 \]
+A claim about a continuum is false if its observed behaviour contradicts
+the universal structural constraints linking admissible states,
+thresholds, cycles and continuumness.
 
+The following criteria apply across all continua \(K_x\), from physical
+levels \(K_1\)–\(K_2\) to metatheoretical levels \(K_9\)–\(K_{12}\).
+
+% -------------------------------------------------------------
 \subsection{Universal Falsifiability Criteria}
 \label{subsec:falsifiability-universal}
 
-The framework is falsifiable if any of the following universal conditions
-are violated by observation, experiment, or mathematical proof.
+A continuum \(K\) is falsified if \emph{any} of the following conditions are
+violated.
 
-\paragraph{Criterion F1 (Admissible Region Failure).}
-There must exist non-empty admissible states:
+\paragraph{F1: Admissible Region Non-Emptiness.}
+Every existing continuum must satisfy
 \[
   \Omega(K) \neq \varnothing.
 \]
-If a continuum is claimed to exist but no admissible states exist under its
-own constraints, the model is falsified.
+If a system is claimed to exist dynamically but its
+potentials, thresholds or flows imply
+\(
+  \Omega(K)=\varnothing,
+\)
+the claim is false.
 
-\paragraph{Criterion F2 (Cycle Requirement).}
-Continuumness is strictly tied to the existence of cycles:
+\paragraph{F2: Cycle–Continuity Equivalence.}
+Continuumness is possible only if cycles exist:
 \[
-  k(K) > 0 \iff C(K) \neq \varnothing.
+  k(K)>0 \iff C(K)\neq\varnothing.
 \]
-If a living continuum is observed without any persistent cycle,
-the theory is false.
+If a system exhibits long-term coherence without any closed cycle
+(metabolic, neural, social, semantic), the framework is falsified.
 
-\paragraph{Criterion F3 (Threshold Structure).}
-Thresholds must separate admissible and inadmissible states:
+\paragraph{F3: Threshold–Boundary Correctness.}
+Thresholds must define the boundary between admissible and inadmissible
+states:
 \[
-  T(s)\le0 \ \text{inside }\Omega,\qquad
-  T(s)=0 \ \text{on }\partial\Omega.
+  T(s)\le 0 \iff s\in\Omega(K),
+  \qquad
+  T(s)=0 \iff s\in\partial\Omega(K).
 \]
-If thresholds do not regulate transitions as predicted, the model is falsified.
+If transitions occur without crossing \(\Theta\), falsification follows.
 
-\paragraph{Criterion F4 (Monotonic Dimension).}
-If a continuum remains alive (\(k>0\)) and its dimension decreases,
-the theory is falsified.
-
-\paragraph{Criterion F5 (Metaspace Compatibility).}
-The existence condition
+\paragraph{F4: Monotonic Dimension Under Survival.}
+If a continuum remains alive (\(k>0\)) but its dimension decreases:
 \[
-  \Omega(K_x) \subseteq \Omega(M_x)
+  \dim K(t+\Delta t) < \dim K(t),
 \]
-must hold for every level.
-Violation falsifies the framework.
+the theory is falsified.  
+Dimension may drop only through collapse (\(k\to0\)).
 
-\subsection{Level-Specific Tests}
+\paragraph{F5: Metaspace Compatibility.}
+Each continuum must obey:
+\[
+  \Omega(K_x)\subseteq\Omega(M_x),
+\]
+where \(M_x\) is the metaspace enabling \(K_x\).  
+Violation implies structural impossibility.
+
+\paragraph{F6: Boundary Divergence at Thresholds.}
+Near thresholds, the minimal cycle period must diverge:
+\[
+  \tau(K)\to\infty
+  \quad\text{as}\quad
+  T\to\Theta.
+\]
+If a continuum approaches its threshold without temporal dilation,
+the universal continuity law fails.
+
+% -------------------------------------------------------------
+\subsection{Level-Specific Falsifiability Tests}
 \label{subsec:falsifiability-levels}
 
-We summarise concrete falsification tests for each major level.
+Each level has its own concrete falsification conditions derived from its
+state space, axes, potentials and thresholds.
 
-\paragraph{Physics (K1–K2).}
+% --- Physics --------------------------------------------------
+\paragraph{K1–K2 (Physics).}
 \begin{itemize}
-  \item Violation of percolation threshold behaviour.
-  \item Existence of connectivity without cycles in K1.
-  \item Observation of time without any periodic process.
+  \item Observation of persistent temporal structure without cycles.
+  \item Connectivity transition not governed by a threshold \(p_c\).
+  \item Existence of a macroscopic phase with no divergence of \(\tau\).
 \end{itemize}
 
-\paragraph{Chemistry (K3–K4).}
+% --- Chemistry ------------------------------------------------
+\paragraph{K3–K4 (Chemistry).}
 \begin{itemize}
-  \item Autocatalytic networks persist with no cycles.
-  \item Protocells maintain gradients without membrane thresholds.
-  \item Transport occurs across membranes without crossing \(\Theta_{\mathrm{mem}}\).
+  \item Autocatalytic sets persisting without a closed RAF-cycle.
+  \item Protocells maintaining gradients while violating membrane thresholds.
+  \item Transport across membranes without crossing \(\Theta_{\mathrm{mem}}\).
 \end{itemize}
 
-\paragraph{Biology (K4–K6).}
+% --- Biology --------------------------------------------------
+\paragraph{K4–K6 (Biology).}
 \begin{itemize}
-  \item Neurons spike without surpassing \(\Theta_{\mathrm{spike}}\).
-  \item Cognitive systems stabilise models without cycles in their attractor space.
-  \item Prediction-error dynamics violate the defined potentials.
+  \item Neurons emitting spikes without surpassing \(\Theta_{\mathrm{spike}}\).
+  \item Failure of spike-cycle closure while the system remains coherent.
+  \item Cognitive systems retaining coherence while \(D>\Theta_{\mathrm{PE}}\).
 \end{itemize}
 
-\paragraph{Social Systems (K7).}
+% --- Social ---------------------------------------------------
+\paragraph{K7 (Social Systems).}
 \begin{itemize}
-  \item Stable institutions without communication cycles.
+  \item Stable institutions without a complete institutional cycle.
   \item Cooperation emerging below \(\Theta_{\mathrm{coop}}\).
-  \item Social collapse occurring with all thresholds satisfied.
+  \item Social collapse occurring despite all thresholds being satisfied.
 \end{itemize}
 
-\paragraph{Civilizations (K8).}
+% --- Civilizational ------------------------------------------
+\paragraph{K8 (Civilizational Systems).}
 \begin{itemize}
-  \item Civilizational collapse without violation of \(\Theta_{\mathrm{stab}}\).
-  \item Long-term stability without cycles \(C_{\mathrm{stab}}\).
+  \item Civilizations collapsing with \(T_8<\Theta_{\mathrm{stab}}\).
+  \item Long-term stability without stabilising cycles \(C_{\mathrm{stab}}\).
+  \item Absence of hysteresis near structural thresholds.
 \end{itemize}
 
-\paragraph{Knowledge and Metatheory (K9–K12).}
+% --- Meta -----------------------------------------------------
+\paragraph{K9–K12 (Knowledge, Models, Semantics).}
 \begin{itemize}
-  \item Logical inconsistency in sustained paradigms (K9).
-  \item Functorial incoherence in persistent metamodels (K10).
-  \item Semantic instability despite all thresholds being satisfied (K11).
-  \item Global integrative collapse without threshold violation (K12).
+  \item Logical inconsistency persisting without collapse in \(K_9\).
+  \item Functorial incoherence tolerated in \(K_{10}\).
+  \item Semantic instability with all \(\Theta_{\mathrm{sem}}\) satisfied.
+  \item Global integrative collapse in \(K_{12}\) without threshold violation.
 \end{itemize}
 
+% -------------------------------------------------------------
+\subsection{Cross-Level Falsifiability}
+\label{subsec:falsifiability-cross}
+
+The Continuum Framework predicts that all transitions
+\(\Psi_{x\rightarrow x+1}\) must obey:
+
+\begin{itemize}
+  \item emergence of a new axis \(A_{x+1}\notin A_x\),
+  \item expansion of the admissible set:
+        \(\Omega(K_x)\subseteq\Omega(K_{x+1})\),
+  \item monotonicity of dimension while \(k>0\),
+  \item divergence of cycle periods near the dimensional threshold
+        \(\Theta_{\mathrm{dim}}\).
+\end{itemize}
+
+If any transition violates these conditions, the entire operator
+\(\Psi_{x\rightarrow x+1}\) is falsified.
+
+% -------------------------------------------------------------
 \subsection{Experimental and Observational Protocols}
 \label{subsec:falsifiability-protocols}
 
-The framework proposes domain-specific tests:
+The framework offers domain-specific tests:
 
-\paragraph{K2 Tests.}
-Percolation experiments on lattices; measurement of \(P_\infty\).
+\paragraph{K2:} Lattice percolation; measurement of \(P_\infty(p)\).  
+\paragraph{K3:} RAF persistence under perturbations.  
+\paragraph{K4:} Osmotic rupture curves; membrane-threshold mapping.  
+\paragraph{K5:} Patch-clamp measurement of \(\Theta_{\mathrm{spike}}\).  
+\paragraph{K6:} Prediction-error saturation experiments.  
+\paragraph{K7:} Communication-coherence mapping in institutions.  
+\paragraph{K8:} Infrastructure-tension measurement; long-wave analysis.  
+\paragraph{K9–K12:} Logical, functorial and semantic consistency tests.
 
-\paragraph{K3 Tests.}
-Sustained autocatalytic cycles under perturbation; reaction feasibility.
-
-\paragraph{K4 Tests.}
-Membrane osmotic collapse; transport thresholds; metabolic cycle persistence.
-
-\paragraph{K5 Tests.}
-Patch-clamp excitation threshold; spike cycle deformation; refractory thresholds.
-
-\paragraph{K6 Tests.}
-Cognitive inconsistency measurement; attractor stability; prediction-error thresholds.
-
-\paragraph{K7 Tests.}
-Institutional cycle duration; coherence of communication flows.
-
-\paragraph{K8 Tests.}
-Stability metrics of infrastructures; analysis of long-term civilizational cycles.
-
-\paragraph{K9–K12 Tests.}
-Logical coherence, structural mapping, semantic consistency.
-
+% -------------------------------------------------------------
 \subsection{Meta-Falsifiability}
 \label{subsec:falsifiability-meta}
 
-The framework also predicts that:
+Every model that represents a continuum must itself satisfy the
+continuum axioms at level \(K_9\) or \(K_{10}\).  
+Thus:
 
 \begin{itemize}
-  \item Any model \(M\) representing a continuum must itself be a continuum
-    under \(K_9\) or \(K_{10}\).
-  \item Falsification of a model requires detecting violation of its own
-    \((\Omega, A, P, \Theta, J, C, k)\).
-  \item Meta-falsification occurs when an entire class of models violates
-    metaspace constraints.
+  \item A model is falsified if its own \((\Omega, A, P, \Theta, J, C, k)\)
+        becomes inconsistent.
+  \item A metamodel is falsified if functorial relations break.
+  \item A semantic layer is falsified if meaning loses stability
+        despite thresholds being respected.
 \end{itemize}
 
+This provides a hierarchical falsifiability chain across all levels.
+
+% -------------------------------------------------------------
 \subsection{Compact Summary}
 \label{subsec:falsifiability-summary}
 
-Falsifiability is encoded directly in the structure of continua:
+A continuum is falsified if:
 \[
-  K \text{ is false} \iff
-  \bigl(
-    \Omega=\varnothing \ \lor \
-    C=\varnothing\text{ while }k>0 \ \lor \
-    \dim\downarrow\text{ while }k>0 \ \lor \
-    \Omega(K_x)\not\subseteq\Omega(M_x)
-  \bigr).
+  \Omega=\varnothing
+  \quad\lor\quad
+  (C=\varnothing\ \text{while}\ k>0)
+  \quad\lor\quad
+  (\dim\downarrow\ \text{while}\ k>0)
+  \quad\lor\quad
+  \Omega(K_x)\not\subseteq\Omega(M_x)
+  \quad\lor\quad
+  \tau\not\to\infty\ \text{as}\ T\to\Theta.
 \]
-The framework is thus fully testable across all physical,
-chemical, biological, cognitive, social, civilizational, and metatheoretical
-domains.
+
+The framework is thus empirically, mathematically and structurally testable
+across physics, chemistry, biology, cognition, social systems,
+civilizations and metatheoretical domains.
