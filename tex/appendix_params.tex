@@ -1,1 +1,203 @@
-% appendix_params placeholder
+% appendix_params.tex
+% Core v2.5 — Appendix C: Parameters, Thresholds, and Tension Functions
+
+\section{Appendix C: Parameters, Thresholds, and Tension Functions}
+\label{sec:appendix-params}
+
+This appendix defines the parameter sets, threshold functions, and tension
+structures used across levels \(K_0\) to \(K_{12}\).  
+Parameters include numerical values, functional dependencies, and structural
+coefficients that shape the admissible region \(\Omega(K)\) and its boundary
+\(\partial\Omega(K)\).
+
+\subsection{Parameter Sets}
+\label{subsec:appendix-params-sets}
+
+For each continuum \(K\), the parameter set is:
+\[
+  \Pi(K) = \{\, \pi_1, \pi_2, \dots, \pi_n \,\},
+\]
+with each parameter \(\pi_i\) belonging to an admissible domain
+\(\mathcal{D}_{\pi_i}\).
+
+Examples include:
+\begin{itemize}
+  \item physical parameters (bond probability \(p\), coupling strengths),
+  \item chemical parameters (rate constants, activities),
+  \item biological parameters (channel densities, conductances),
+  \item cognitive parameters (prediction-error bounds),
+  \item social parameters (communication rates),
+  \item civilizational parameters (resource throughput),
+  \item metatheoretical parameters (coherence coefficients).
+\end{itemize}
+
+\subsection{Threshold Functions}
+\label{subsec:appendix-params-thresholds}
+
+Thresholds regulate transitions and define the admissible surface:
+\[
+  \Theta : S(K) \to \mathbb{R}.
+\]
+
+Each threshold may depend on parameters:
+\[
+  \Theta(s) = \Theta(s;\Pi).
+\]
+
+Key threshold classes include:
+\begin{itemize}
+  \item \emph{dimensional thresholds} \(\Theta_{\mathrm{dim}}\),
+  \item \emph{stability thresholds} \(\Theta_{\mathrm{stab}}\),
+  \item \emph{reactivity thresholds} \(\Theta_{\mathrm{react}}\),
+  \item \emph{membrane thresholds} \(\Theta_{\mathrm{mem}}\),
+  \item \emph{excitation thresholds} \(\Theta_{\mathrm{spike}}\),
+  \item \emph{cognitive thresholds} \(\Theta_{\mathrm{cog}}\),
+  \item \emph{cooperation thresholds} \(\Theta_{\mathrm{coop}}\),
+  \item \emph{semantic thresholds} \(\Theta_{\mathrm{sem}}\).
+\end{itemize}
+
+\subsection{Threshold Surfaces}
+\label{subsec:appendix-params-surfaces}
+
+The admissible boundary is defined by:
+\[
+  T(s) = \Theta(s;\Pi)
+  \qquad \iff \qquad
+  s\in \partial\Omega(K).
+\]
+
+The structure may be:
+\begin{itemize}
+  \item smooth,
+  \item nonlinear,
+  \item piecewise-defined,
+  \item discontinuous.
+\end{itemize}
+
+\subsection{Tension Function}
+\label{subsec:appendix-params-tension}
+
+Structural tension is defined as:
+\[
+  T : S(K)\to\mathbb{R},
+\]
+with the semantics:
+\[
+  T<0 \Rightarrow s\in \Omega(K), \qquad
+  T=0 \Rightarrow s\in \partial\Omega(K), \qquad
+  T>0 \Rightarrow s\notin\Omega(K).
+\]
+
+Tension may depend on potentials and flows:
+\[
+  T = f(P, J, \Pi).
+\]
+
+\subsection{Composite Thresholds}
+\label{subsec:appendix-params-composite}
+
+Some transitions require multiple thresholds simultaneously:
+\[
+  T_1 \le \Theta_1,\quad
+  T_2 \le \Theta_2,\quad
+  \dots,\quad
+  T_m \le \Theta_m.
+\]
+
+The admissible region then satisfies:
+\[
+  \Omega(K)=\{s:\max_k (T_k(s)-\Theta_k(s))\le0\}.
+\]
+
+\subsection{Parameter Evolution}
+\label{subsec:appendix-params-evolution}
+
+Parameters may evolve:
+\[
+  \frac{d\Pi}{dt} = W(A,P,\Theta,J,C,k,\Pi,t)
+\]
+where \(W\) is an operator describing:
+
+\begin{itemize}
+  \item adaptation,
+  \item learning,
+  \item evolution,
+  \item institutional change,
+  \item semantic drift.
+\end{itemize}
+
+\subsection{Landscape Interpretation}
+\label{subsec:appendix-params-landscape}
+
+Thresholds and tension define a landscape:
+\[
+  L(s) = T(s) - \Theta(s;\Pi).
+\]
+The sign determines position relative to \(\Omega\).
+
+Phase transitions occur when the landscape touches zero.
+
+\subsection{Examples by Level}
+\label{subsec:appendix-params-levels}
+
+\paragraph{K2 (Percolation).}
+\[
+  \Theta_{\mathrm{dim}} = p_c,\quad
+  T = p - p_c.
+\]
+
+\paragraph{K3 (Autocatalytic Chemistry).}
+\[
+  \Theta_{\mathrm{react}}=0, \quad
+  T = \Delta G.
+\]
+
+\paragraph{K4 (Protocells).}
+\[
+  T = \Pi_{\mathrm{osm}} - \Pi_{\mathrm{mem}},
+\]
+with \(\Pi_{\mathrm{mem}}\) determined by membrane parameters.
+
+\paragraph{K5 (Neurons).}
+\[
+  \Theta_{\mathrm{spike}} = V_{\mathrm{thr}},
+  \qquad T = V - V_{\mathrm{thr}}.
+\]
+
+\paragraph{K6 (Cognition).}
+\[
+  \Theta_{\mathrm{cog}} = \Theta_{\mathrm{PE}}, \quad
+  T = D(m) - \Theta_{\mathrm{PE}}.
+\]
+
+\paragraph{K7 (Social Systems).}
+\[
+  T = T_{\mathrm{comm}} - \Theta_{\mathrm{coop}}.
+\]
+
+\paragraph{K8 (Civilizations).}
+\[
+  T = T_{\mathrm{inst}} - \Theta_{\mathrm{stab}}.
+\]
+
+\paragraph{K9–K12 (Metatheory).}
+\[
+  T = \text{logical or semantic inconsistency measure}.
+\]
+
+\subsection{Compact Summary}
+\label{subsec:appendix-params-summary}
+
+This appendix defines all parameter sets, tension functions, and thresholds
+across levels. These determine:
+
+\begin{itemize}
+  \item the shape of \(\Omega(K)\),
+  \item the location of \(\partial\Omega(K)\),
+  \item all phase transitions,
+  \item the emergence of new axes,
+  \item and collapse conditions.
+\end{itemize}
+
+The formalism is universal across physics, chemistry, biology, cognition,
+social systems, civilizations, and metatheoretical levels.
