@@ -1,1 +1,96 @@
-% bibliography_structure placeholder
+% bibliography_structure.tex
+% Core v2.5 — Bibliography Structure (placeholder for user-managed BibTeX)
+
+\section{Bibliography Structure}
+\label{sec:bibliography-structure}
+
+This document uses an external BibTeX file to manage all references.
+The purpose of this section is to define the structure and conventions
+of the bibliography used throughout the Continuum Framework.
+
+\subsection{BibTeX File Organisation}
+\label{subsec:bibliography-organisation}
+
+All references are stored in a dedicated file, for example:
+\begin{verbatim}
+references.bib
+\end{verbatim}
+
+Entries are grouped by discipline and by continuum level:
+\begin{itemize}
+  \item physics (K0–K2),
+  \item chemistry (K2–K4),
+  \item biology (K4–K6),
+  \item cognition (K6),
+  \item sociology (K7),
+  \item civilization studies (K8),
+  \item metatheory and metamodels (K9–K12),
+  \item general systems theory, mathematics, logic.
+\end{itemize}
+
+\subsection{Citation Style}
+\label{subsec:bibliography-style}
+
+The recommended citation commands are:
+\begin{itemize}
+  \item \verb|\cite{key}| for parenthetical citations,
+  \item \verb|\citep{key}| and \verb|\citet{key}| if using natbib,
+  \item \verb|\textcite{key}| if using biblatex.
+\end{itemize}
+
+Entries should follow common BibTeX standards:
+\begin{itemize}
+  \item \verb|@article|,
+  \item \verb|@book|,
+  \item \verb|@inproceedings|,
+  \item \verb|@misc| (for online or preprint materials).
+\end{itemize}
+
+\subsection{Naming Conventions}
+\label{subsec:bibliography-naming}
+
+Keys should follow the form:
+\[
+  \text{AuthorLastNameYearShortTitle}
+\]
+Examples:
+\begin{verbatim}
+Kauffman1993Origins
+Szostak2018Protocells
+Nassehi2005SozialeSysteme
+Ladyman2013Complexity
+Girvan2002Community
+\end{verbatim}
+
+\subsection{Cross-Level Referencing}
+\label{subsec:bibliography-cross}
+
+References may be associated with several levels. For example:
+\begin{itemize}
+  \item theoretical biology texts may be cited in both K4 and K5,
+  \item computational neuroscience may sit between K5 and K6,
+  \item sociocybernetics may link K7 and K8,
+  \item logical or semantic works apply to K9–K12.
+\end{itemize}
+
+\subsection{BibTeX Example Entry}
+\label{subsec:bibliography-example}
+
+A typical BibTeX entry:
+\begin{verbatim}
+@article{Kauffman1993Origins,
+  author    = {Stuart A. Kauffman},
+  title     = {Autocatalytic Sets of Proteins},
+  journal   = {Journal of Theoretical Biology},
+  year      = {1993},
+  volume    = {181},
+  pages     = {47--94}
+}
+\end{verbatim}
+
+\subsection{Summary}
+\label{subsec:bibliography-summary}
+
+This section defines the structure of the bibliography, expects references
+to be supplied via an external BibTeX file, and outlines conventions for
+consistent citation across all continuum levels in the unified hierarchy.
