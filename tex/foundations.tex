@@ -43,7 +43,7 @@ and write \(\Omega, A, P, \Theta, J, C, k\).
 \subsection{Continuum as a Structured System}
 \label{subsec:foundations-continuum}
 
-\begin{definition}[Continuum]
+\paragraph{Definition (Continuum).}
 A \emph{continuum} is a tuple
 \[
   K = \bigl(\Omega, A, P, \Theta, J, C, k\bigr)
@@ -85,7 +85,6 @@ together with an ambient state space \(S(K)\) such that:
         The function \(k : \Omega(K) \to [0,1]\) measures the global
         connectedness and viability of the continuum.
 \end{enumerate}
-\end{definition}
 
 Intuitively, a continuum exists whenever there is a non-empty set of
 admissible states equipped with axes, potentials, thresholds, flows, and cycles,
@@ -96,7 +95,7 @@ such that at least one non-trivial cycle persists and \(k > 0\).
 
 We now give the universal definition of admissible states and their boundary.
 
-\begin{definition}[Admissible states]
+\paragraph{Definition (Admissible states).}
 For a continuum \(K\) with state space \(S(K)\), the set of admissible states
 \(\Omega(K)\) is defined by
 \begin{align*}
@@ -114,9 +113,8 @@ where:
   \item \(T(s)\) is the structural tension of state \(s\), defined such that
         \(T(s) \leq 0\) means that no threshold is violated.
 \end{itemize}
-\end{definition}
 
-\begin{definition}[Boundary of admissible states]
+\paragraph{Definition (Boundary of admissible states).}
 The boundary of the admissible state set is
 \[
   \partial\Omega(K) =
@@ -129,14 +127,13 @@ The boundary of the admissible state set is
 \]
 States on \(\partial\Omega(K)\) lie on the thresholds of phase transitions,
 dimension growth, or collapse of the continuum.
-\end{definition}
 
 \subsection{Time, Cycles and the Evolution Operator}
 \label{subsec:foundations-time}
 
 Time in the Continuum Framework is defined in terms of cycles.
 
-\begin{definition}[Minimal cycle period and time scale]
+\paragraph{Definition (Minimal cycle period and time scale).}
 Let \(C(K)\) be the set of cycles of a continuum \(K\), and let
 \(\tau_n > 0\) denote the period of a cycle \(C_n\).
 If there exists at least one non-trivial cycle, the characteristic
@@ -146,9 +143,8 @@ time scale of \(K\) is defined as
 \]
 If \(C(K) = \varnothing\), we set \(\tau(K) = +\infty\); in this case
 the continuum is considered dead (\(k=0\)).
-\end{definition}
 
-\begin{definition}[Evolution operator]
+\paragraph{Definition (Evolution operator).}
 The evolution of a continuum is given by an operator
 \[
   E : K(t) \mapsto K(t+\Delta t),
@@ -164,7 +160,6 @@ which can be decomposed into the dynamics of the components:
 \end{align*}
 Here \(F, G, H, Q, S, U\) are level-dependent operators, constrained
 by the axioms and the structure of the metaspace.
-\end{definition}
 
 \subsection{Core Axioms}
 \label{subsec:foundations-axioms}
