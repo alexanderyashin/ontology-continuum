@@ -1,15 +1,24 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 
 % -------------------------------------------------
 % Packages
 % -------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \usepackage[a4paper,margin=2.5cm]{geometry}
+
 \usepackage{amsmath, amssymb, amsthm}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{physics}
+\usepackage{mathtools}
 \usepackage{bm}
 
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -17,12 +26,33 @@
     citecolor=blue
 }
 
+\usepackage{microtype}
+
 % -------------------------------------------------
-% Document Metadata
+% Theorem environments
+% -------------------------------------------------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{remark}
+\newtheorem{criterion}{Criterion}
+\renewcommand{\thecriterion}{F\arabic{criterion}}
+
+\theoremstyle{plain}
+\newtheorem{prediction}{Prediction}
+\renewcommand{\theprediction}{P\arabic{prediction}}
+
+% -------------------------------------------------
+% Title metadata
 % -------------------------------------------------
 \title{\textbf{The Ontology of Continua}\\
 \vspace{0.3em}
 \large A Unified Axiomatic Framework for Emergence, Persistence and Collapse}
+
 \author{Alexander Yashin}
 \date{v1.0-preprint}
 
@@ -36,15 +66,15 @@
 \newpage
 
 % -------------------------------------------------
-% Core Sections (matching your tex/ folder)
+% Core Sections (in correct logical order)
 % -------------------------------------------------
 
+\input{tex/abstract}
 \input{tex/introduction}
 \input{tex/foundations}
-\input{tex/core_compact}
-\input{tex/hierarchy}
 \input{tex/continuity}
-\input{tex/disciplines}
+\input{tex/dynamics}
+\input{tex/hierarchy}
 \input{tex/falsifiability}
 \input{tex/applications}
 \input{tex/discussion}
@@ -52,14 +82,16 @@
 \input{tex/bibliography_structure}
 
 % -------------------------------------------------
-% Appendices (also already present)
+% Appendices
 % -------------------------------------------------
 
+\clearpage
 \appendix
+
+\input{tex/appendix_notation}
 \input{tex/appendix_core}
 \input{tex/appendix_continuity}
 \input{tex/appendix_params}
-\input{tex/appendix_notation}
 \input{tex/appendix_levels}
 \input{tex/appendix_dynamics}
 \input{tex/appendix_figures}
