@@ -4,6 +4,9 @@
 **Author:** Alexander Yashin  
 **Version:** v1.0-preprint
 
+![Version](https://img.shields.io/badge/version-v1.0--preprint-blue)
+![License](https://img.shields.io/github/license/alexanderyashin/ontology-continuum)
+
 ## Overview
 
 
