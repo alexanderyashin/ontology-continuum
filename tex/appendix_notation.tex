@@ -4,60 +4,70 @@
 \section{Appendix D: Notation and Symbol Glossary}
 \label{sec:appendix-notation}
 
-This appendix defines all symbols, functions, operators, and sets used in the
-Continuum Framework.  
-It serves as a reference for the mathematical notation used throughout all
-chapters and appendices.
+This appendix defines all symbols, sets, operators and quantities used across
+the Continuum Framework. It serves as a unified reference for notation
+throughout all sections and appendices.
 
 \subsection{Sets and Spaces}
 \label{subsec:appendix-notation-sets}
 
 \begin{itemize}
   \item \(S(K)\) — state space of continuum \(K\).
-  \item \(\Omega(K)\subseteq S(K)\) — admissible states.
+  \item \(\Omega(K)\subseteq S(K)\) — admissible region.
   \item \(\partial\Omega(K)\subseteq S(K)\) — boundary of admissibility.
-  \item \(M_x\) — metaspace associated with \(K_x\).
+  \item \(M_x\) — metaspace corresponding to continuum \(K_x\).
   \item \(\mathcal{A}_{A_j}\) — domain of axis \(A_j\).
   \item \(\mathcal{D}_{P_i}\) — domain of potential \(P_i\).
   \item \(\mathcal{D}_{\pi_i}\) — domain of parameter \(\pi_i\).
-  \item \(J_A,J_P,J_\Theta,J_J,J_C\) — index sets for components.
+  \item \(J_A,J_P,J_\Theta,J_J,J_C\) — index sets for axes, potentials,
+        thresholds, flows and cycles.
 \end{itemize}
 
 \subsection{Core Components}
 \label{subsec:appendix-notation-core}
 
 \begin{itemize}
-  \item \(A(K)=\{A_j\}\) — axes of difference.
-  \item \(P(K)=\{P_i\}\) — potentials.
-  \item \(\Theta(K)=\{\Theta_\ell\}\) — thresholds.
+  \item \(A(K)=\{A_j\}\) — set of axes of difference.
+  \item \(P(K)=\{P_i\}\) — set of potentials.
+  \item \(\Theta(K)=\{\Theta_\ell\}\) — threshold family.
   \item \(J(K)=\{J_m\}\) — flows.
-  \item \(C(K)=\{C_n\}\) — cycles.
-  \item \(k(K):\Omega(K)\to[0,1]\) — continuumness.
-  \item \(T(s)\) — structural tension in state \(s\).
+  \item \(C(K)=\{C_n\}\) — cycles (closed trajectories).
+  \item \(k(K):\Omega(K)\to[0,1]\) — continuumness (viability).
+  \item \(T(s)\) — structural tension at state \(s\).
 \end{itemize}
 
 \subsection{Operators}
 \label{subsec:appendix-notation-operators}
 
 \begin{itemize}
-  \item \(E\) — evolution operator.
-  \item \(\Psi_{x\rightarrow x+1}\) — transition operator.
-  \item \(F,G,H,Q,S,U\) — component evolution operators for the dynamics.
+  \item \(E\) — universal evolution operator.
+  \item \(\Psi_{x\rightarrow x+1}\) — transition operator between continua.
+  \item \(F,G,H,Q,S,R,U\) — component evolution operators:
+    \begin{itemize}
+      \item \(F\): axis dynamics,
+      \item \(G\): potential dynamics,
+      \item \(H\): threshold dynamics,
+      \item \(Q\): tension dynamics,
+      \item \(S\): flow dynamics,
+      \item \(R\): cycle dynamics,
+      \item \(U\): continuumness dynamics.
+    \end{itemize}
   \item \(W\) — parameter evolution operator.
 \end{itemize}
 
 \subsection{Dynamics}
 \label{subsec:appendix-notation-dynamics}
 
-Differential relations:
+Differential relations obey the unified scheme:
 \begin{align*}
   \frac{dA}{dt} &= F(A,P,\Theta,J,C,t), \\
   \frac{dP}{dt} &= G(A,P,\Theta,J,C,t), \\
   \frac{d\Theta}{dt} &= H(A,P,\Theta,J,C,t), \\
-  \frac{dJ}{dt} &= Q(A,P,\Theta,J,C,t), \\
-  \frac{dC}{dt} &= S(A,P,\Theta,J,C,t), \\
-  \frac{dk}{dt} &= U(A,P,\Theta,J,C,k,t), \\
-  \frac{d\Pi}{dt} &= W(A,P,\Theta,J,C,k,\Pi,t).
+  \frac{dT}{dt} &= Q(A,P,\Theta,J,C,T,t), \\
+  \frac{dJ}{dt} &= S(A,P,\Theta,J,C,t), \\
+  \frac{dC}{dt} &= R(A,P,\Theta,J,C,T,t), \\
+  \frac{dk}{dt} &= U(A,P,\Theta,J,C,T,k,t), \\
+  \frac{d\Pi}{dt} &= W(A,P,\Theta,J,C,T,k,\Pi,t).
 \end{align*}
 
 \subsection{Temporal Quantities}
@@ -65,18 +75,15 @@ Differential relations:
 
 \begin{itemize}
   \item \(\tau_n\) — period of cycle \(C_n\).
-  \item \(\tau(K)\) — minimal cycle period:
-  \[
-    \tau(K)=\min_n \tau_n.
-  \]
+  \item \(\tau(K)=\min_n \tau_n\) — minimal active cycle period.
 \end{itemize}
 
 \subsection{Dimensions}
 \label{subsec:appendix-notation-dim}
 
 \begin{itemize}
-  \item \(\dim K = |A(K)|\) — number of axes.
-  \item \(\Theta_{\mathrm{dim}}\) — dimensional threshold.
+  \item \(\dim K = |A(K)|\) — dimension of the continuum.
+  \item \(\Theta_{\mathrm{dim}}\) — dimensional-threshold value.
   \item \(\mathrm{DoF}(K)\) — degrees of freedom of \(K\).
 \end{itemize}
 
@@ -84,13 +91,14 @@ Differential relations:
 \label{subsec:appendix-notation-thresholds}
 
 \begin{itemize}
-  \item Stability thresholds \(\Theta_{\mathrm{stab}}\).
-  \item Reaction thresholds \(\Theta_{\mathrm{react}}\).
-  \item Membrane thresholds \(\Theta_{\mathrm{mem}}\).
-  \item Spike thresholds \(\Theta_{\mathrm{spike}}\).
-  \item Cognitive thresholds \(\Theta_{\mathrm{cog}}\).
-  \item Cooperation thresholds \(\Theta_{\mathrm{coop}}\).
-  \item Semantic thresholds \(\Theta_{\mathrm{sem}}\).
+  \item \(\Theta_{\mathrm{stab}}\) — stability thresholds.
+  \item \(\Theta_{\mathrm{react}}\) — reaction thresholds.
+  \item \(\Theta_{\mathrm{mem}}\) — membrane/mechanical thresholds.
+  \item \(\Theta_{\mathrm{spike}}\) — neuronal spike thresholds.
+  \item \(\Theta_{\mathrm{cog}}\) — cognitive thresholds.
+  \item \(\Theta_{\mathrm{coop}}\) — cooperation thresholds.
+  \item \(\Theta_{\mathrm{sem}}\) — semantic thresholds.
+  \item \(\Theta_{\mathrm{cycle}}\) — cycle viability thresholds.
 \end{itemize}
 
 \subsection{Tension}
@@ -99,36 +107,47 @@ Differential relations:
 \[
   T : S(K)\to\mathbb{R}
 \]
-indicates structural tension.
+represents structural tension.  
+A state is admissible iff:
+\[
+  T(s)\le 0.
+\]
+Boundary states satisfy:
+\[
+  T(s)=0.
+\]
 
 \subsection{Parameter Sets}
 \label{subsec:appendix-notation-params}
 
 \[
-  \Pi(K) = \{\pi_1,\dots,\pi_n\}.
+  \Pi(K)=\{\pi_1,\dots,\pi_n\},
 \]
+all free, adaptive and structural parameters of the continuum.
 
 \subsection{Metaspace Conditions}
 \label{subsec:appendix-notation-meta}
 
+Compatibility with the metaspace requires:
 \[
   \Omega(K_x)\subseteq\Omega(M_x), \qquad
   A(K_x)\subseteq A(M_x).
 \]
+Degrees of freedom obey:
 \[
-  \mathrm{DoF}(K_x)\le\mathrm{DoF}(M_{x+1}).
+  \mathrm{DoF}(K_x) \le \mathrm{DoF}(M_{x+1}).
 \]
 
 \subsection{Glossary of Frequently Used Symbols}
 \label{subsec:appendix-notation-glossary}
 
 \begin{itemize}
-  \item \(s\) — state of the continuum.
+  \item \(s\) — state of a continuum.
   \item \(\partial\Omega\) — boundary of admissibility.
   \item \(L(s)=T(s)-\Theta(s)\) — landscape function.
   \item \(p_c\) — percolation threshold.
-  \item \(V_{\mathrm{thr}}\) — voltage threshold.
-  \item \(D(m)\) — cognitive discrepancy.
+  \item \(V_{\mathrm{thr}}\) — neuronal spike threshold.
+  \item \(D\) — global cognitive discrepancy.
   \item \(T_{\mathrm{comm}}\) — communication tension.
   \item \(T_{\mathrm{inst}}\) — institutional tension.
 \end{itemize}
@@ -136,7 +155,6 @@ indicates structural tension.
 \subsection{Compact Summary}
 \label{subsec:appendix-notation-summary}
 
-This appendix provides a complete glossary of symbols across all levels
-\(K_0\) to \(K_{12}\).  
-It ensures consistency of notation and enables cross-level analysis using a
-single unified symbolic system.
+This appendix provides a unified glossary for all components, operators, 
+thresholds, tensions and domains across continua \(K_0\)–\(K_{12}\).  
+It ensures cross-level consistency and a single coherent symbolic system.
