@@ -1,1 +1,142 @@
-% core_compact placeholder
+% core_compact.tex
+% Core v2.5 — Ultra-Compact Core Model
+
+\section{The Compact Core Model}
+\label{sec:core-compact}
+
+This section presents the ultra-compact formulation of the Continuum Core
+as fixed in Core~v2.5. It provides the minimal, level-independent structure
+from which all continua \(K_0,\dots,K_{12}\) are obtained.
+
+\subsection{Continuum Template}
+\label{subsec:core-template}
+
+A continuum \(K\) is defined by the tuple
+\[
+  K = \bigl(\Omega, A, P, \Theta, J, C, k\bigr)
+\]
+together with a state space \(S(K)\).
+The components satisfy:
+
+\begin{itemize}
+  \item \textbf{Axes \(A\).}  
+    A finite or countable family of axes \(A_j : S(K) \to \mathcal{A}_{A_j}\)
+    giving distinguishable coordinates.
+
+  \item \textbf{Potentials \(P\).}  
+    Functions \(P_i : S(K) \to \mathcal{D}_{P_i}\)
+    determining energetic, chemical, mechanical, cognitive,
+    or abstract potentials.
+
+  \item \textbf{Thresholds \(\Theta\).}  
+    A set of critical values separating regimes of stability, transition, and
+    collapse.
+
+  \item \textbf{Flows \(J\).}  
+    Mappings describing transport, transformation, influence,
+    communication, or propagation.
+
+  \item \textbf{Cycles \(C\).}  
+    Closed trajectories \(C_n : [0,\tau_n] \to S(K)\)
+    sustaining non-zero continuity.
+
+  \item \textbf{Continuumness \(k\).}  
+    A scalar function \(k : \Omega \to [0,1]\)
+    measuring global connectedness and viability.
+\end{itemize}
+
+\subsection{Admissible Region}
+\label{subsec:core-omega}
+
+The admissible state set is
+\begin{align*}
+  \Omega(K) = \bigl\{\, s \in S(K) \ \big|\ &
+    P_i(s) \in \mathcal{D}_{P_i},\
+    A_j(s) \in \mathcal{A}_{A_j},\
+    C(s) \neq \varnothing,\\
+  & \vec{\Theta}(s) \ge 0,\
+    T(s) \le 0 \bigr\},
+\end{align*}
+where \(T(s)\) is structural tension.
+The boundary of admissible states is
+\[
+  \partial\Omega(K)
+  = \bigl\{\, s \in S(K) \mid
+    T(s)=0\ \text{or}\ 
+    P_i(s) \in \partial \mathcal{D}_{P_i}\ \text{or}\ 
+    A_j(s) \in \partial \mathcal{A}_{A_j}
+  \bigr\}.
+\]
+
+\subsection{Core Dynamics}
+\label{subsec:core-dynamics}
+
+The universal evolution operator is
+\[
+  E : K(t) \mapsto K(t+\Delta t)
+\]
+with dynamics
+\begin{align*}
+  \frac{\mathrm{d}A}{\mathrm{d}t} &= F(A,P,\Theta,J,C,t),\\
+  \frac{\mathrm{d}P}{\mathrm{d}t} &= G(A,P,\Theta,J,C,t),\\
+  \frac{\mathrm{d}\Theta}{\mathrm{d}t} &= H(A,P,\Theta,J,C,t),\\
+  \frac{\mathrm{d}J}{\mathrm{d}t} &= Q(A,P,\Theta,J,C,t),\\
+  \frac{\mathrm{d}C}{\mathrm{d}t} &= S(A,P,\Theta,J,C,t),\\
+  \frac{\mathrm{d}k}{\mathrm{d}t} &= U(A,P,\Theta,J,C,k,t).
+\end{align*}
+
+\subsection{Minimal Time Scale}
+\label{subsec:core-time}
+
+If at least one non-trivial cycle exists, the characteristic time scale is
+\[
+  \tau(K) = \min_n \tau_n.
+\]
+If \(C(K) = \varnothing\), then \(k=0\) and \(K\) is dead.
+
+\subsection{Universal Axioms}
+\label{subsec:core-axioms}
+
+\paragraph{Axiom A1 (Difference).}
+A continuum exists only if there are at least two distinguishable states.
+
+\paragraph{Axiom A2 (Continuity).}
+Continuumness is non-zero if and only if at least one closed cycle persists.
+
+\paragraph{Axiom A3 (Threshold Constraint).}
+A state is admissible only if all thresholds are satisfied,
+i.e.\ \(T(s) \le 0\).
+
+\paragraph{Axiom A4 (Conjugate Hierarchy).}
+Each continuum \(K_x\) is constrained by its metaspace \(M_x\);
+the next metaspace \(M_{x+1}\) is induced by \(K_x\).
+
+\subsection{Global Theorems}
+\label{subsec:core-theorems}
+
+We summarise the universal theorems governing all continua.
+
+\paragraph{Theorem T1 (Monotonicity of Dimension).}
+If \(k(t)>0\), then \(\dim K(t)\) cannot decrease.
+
+\paragraph{Theorem T2 (Death as Loss of Cycles).}
+A continuum dies if and only if \(C=\varnothing\).
+
+\paragraph{Theorem T3 (Compatibility with Metaspace).}
+A continuum exists if and only if its admissible region is contained
+in that of its metaspace:
+\[
+  \Omega(K_x) \subseteq \Omega(M_x).
+\]
+
+\subsection{Compact Summary}
+\label{subsec:core-summary}
+
+All continua \(K_0,\dots,K_{12}\) are instances of the universal template
+\[
+  K = (\Omega,A,P,\Theta,J,C,k),
+\]
+with level-specific instantiations of state space, axes, potentials,
+thresholds, flows, cycles, and continuity.
+This minimal core fully determines emergence, growth, collapse, and
+inter-level transitions throughout the hierarchy.
